@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: white;
+  background-color: #1c1a1f;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+li::marker {
+  content: "- ";
+}
+
+.code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.hyperlink-icon {
+  display: inline;
+  height: 1.5rem;
+  width: 1.5rem;
+  vertical-align: top;
+}
+
+#content {
+  animation: fadein 0.75s linear forwards;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

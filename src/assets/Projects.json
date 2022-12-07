@@ -1,0 +1,44 @@
+[
+  {
+    "title": "WAANME",
+    "imgSrc": "./img/waanme.png",
+    "externalLink": "https://www.google.com",
+    "description": "WAANME is a versatile tasks posting and finding platform. Targetting smaller tasks e.g. laudry, ride-haling, going to the store.",
+    "techstack": "PWA - React / Cloud Firestore / Firebase Cloud Functions / Google Map API"
+  },
+  {
+    "title": "WAANME",
+    "imgSrc": "./img/waanme.png",
+    "externalLink": "https://www.google.com",
+    "description": "WAANME is a versatile tasks posting and finding platform. Targetting smaller tasks e.g. laudry, ride-haling, going to the store.",
+    "techstack": "PWA - React / Cloud Firestore / Firebase Cloud Functions / Google Map API"
+  },
+  {
+    "title": "WAANME",
+    "imgSrc": "./img/waanme.png",
+    "externalLink": "https://www.google.com",
+    "description": "WAANME is a versatile tasks posting and finding platform. Targetting smaller tasks e.g. laudry, ride-haling, going to the store.",
+    "techstack": "PWA - React / Cloud Firestore / Firebase Cloud Functions / Google Map API"
+  },
+  {
+    "title": "WAANME",
+    "imgSrc": "./img/waanme.png",
+    "externalLink": "https://www.google.com",
+    "description": "WAANME is a versatile tasks posting and finding platform. Targetting smaller tasks e.g. laudry, ride-haling, going to the store.",
+    "techstack": "PWA - React / Cloud Firestore / Firebase Cloud Functions / Google Map API"
+  },
+  {
+    "title": "WAANME",
+    "imgSrc": "./img/waanme.png",
+    "externalLink": "https://www.google.com",
+    "description": "WAANME is a versatile tasks posting and finding platform. Targetting smaller tasks e.g. laudry, ride-haling, going to the store.",
+    "techstack": "PWA - React / Cloud Firestore / Firebase Cloud Functions / Google Map API"
+  },
+  {
+    "title": "WAANME",
+    "imgSrc": "./img/waanme.png",
+    "externalLink": "https://www.google.com",
+    "description": "WAANME is a versatile tasks posting and finding platform. Targetting smaller tasks e.g. laudry, ride-haling, going to the store.",
+    "techstack": "PWA - React / Cloud Firestore / Firebase Cloud Functions / Google Map API"
+  }
+]
