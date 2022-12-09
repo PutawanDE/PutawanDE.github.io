@@ -5,7 +5,7 @@
 
 <div class="border p-5 border-gray-500">
   <div class="flex gap-5 justify-around flex-wrap">
-    <img class="h-52 w-52 object-cover" src={imgSrc} />
+    <img class="h-60 w-60 object-cover bg-white" src={imgSrc} />
     <div>
       <!-- header -->
       <div class="border-b py-1">
