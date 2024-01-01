@@ -29,5 +29,5 @@
    * Use global.d.ts instead of compilerOptions.types
    * to avoid limiting type declarations.
    */
-  "include": ["src/untyped.d.ts", "src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+  "include": ["src/untyped.d.ts", "src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "src/components/SkillData.js"]
 }

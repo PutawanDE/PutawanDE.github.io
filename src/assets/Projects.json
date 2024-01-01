@@ -1,42 +1,24 @@
 [
   {
-    "title": "Plastic Model Online Shop",
-    "imgSrc": "./img/online_model_shop.png",
-    "externalLink": "https://github.com/RiwEZ/Database-WebProject",
-    "description": "My first project using Laravel and Sql. It features basic online shop functionalities - browsing, buying products, and check-out.",
-    "techstack": "Website - React / Laravel / Sql"
+    "title": "Airwareness - Air Quality Mobile Application",
+    "imgSrc": "./img/airwareness.png",
+    "alt": "Screenshot of Airwareness",
+    "externalLink": "https://github.com/AreYouWorking/Air-pollution-awareness",
+    "description": "I worked with a team of 5 to develop a mobile application that displays air quality data from the government's API. I was responsible for developing a feature that allows users to edit their photos with air quality data (like IG Story stickers) and share them on social media.",
+    "techstack": "Mobile Application - Flutter / Dart"
   },
   {
-    "title": "Multilayer Perceptron from Scratch",
+    "title": "Neural Network from Scratch",
     "imgSrc": "./img/Neural_network.png",
+    "alt": "Image of a Neural Network",
     "externalLink": "https://github.com/PutawanDE/MLP-261456",
     "description": "I implemented an MLP from scratch using Java. I used Back Propagation, Genetic Algorithms, and Particle Swarm Optimization to train a network.",
     "techstack": "Computational Intelligence - Java"
   },
   {
-    "title": "The Design Award, IDC Robocon 2022",
-    "imgSrc": "./img/idc2022.jpg",
-    "externalLink": "http://www.idc-robocon.org/idc2022_eng/index.html",
-    "description": "I worked online (due to COVID19) with members from China, South Korea and Mexico to design a robot. Over the course of 10 days, I learned to work online effectively with international members, and to design a successful robot in Unity utilizing its Physics engine and 3D modelling features.",
-    "techstack": "Competition - Unity C#"
-  },
-  {
-    "title": "4th Place, Thai National Kibo Robot Programming Challenge",
-    "imgSrc": "./img/kibo.jpg",
-    "externalLink": "https://www.nstda.or.th/spaceeducation/3rd-kibo-rpc-score/",
-    "description": "I was in Team LYNX that was ranked 4th place in the Thai national level. The competition involves controlling the robot in zero-g to accurately shoot the target using laser. The target is found using OpenCV and computer vision.",
-    "techstack": "Competition - Java / OpenCV"
-  },
-  {
-    "title": "3rd Place, Faipa Hackathon",
-    "imgSrc": "./img/cerberus.jpg",
-    "externalLink": "https://www.science.cmu.ac.th/prsci/news-detail.php?id=4176#.Y5NJoXZBxPY",
-    "description": "Faipa Hackathon was a hackathon which students and start-ups gathered to solve the wildfire crisis in Northern Thailand using satellite technology and big data. We are awarded third place for our solution in integrating hotspot data from satellite, sensor(IoT), communication and wildfire preparation plan.",
-    "techstack": "Hackathon"
-  },
-  {
     "title": "CARIN",
     "imgSrc": "./img/carin.png",
+    "alt": "Screenshot of CARIN",
     "externalLink": "https://github.com/PutawanDE/ExpensivePigCARIN",
     "description": "It is a single-player online strategy game. It features genetic code parser and interpreter for game's characters, and multi-threaded server support for concurrent playing games.",
     "techstack": "Game - Java Spring WebSocket / React / TypeScript / CSS / HTML"
@@ -44,13 +26,15 @@
   {
     "title": "TCAS Countdown Twitter Bot",
     "imgSrc": "./img/tcas_countdown.jpg",
+    "alt": "Screenshot of TCAS Countdown Twitter Bot",
     "externalLink": "https://twitter.com/CountdownTCAS",
-    "description": "14k followers and counting... A twitter bot that tweets days until Thai university exams (TCAS).",
+    "description": "18k followers and counting... A twitter bot that tweets days until Thai university exams (TCAS).",
     "techstack": "Bot - Node.js / AWS Lambda / AWS EventBridge / Twitter API"
   },
   {
     "title": "Generative Art Gallery",
     "imgSrc": "./img/gen_art.png",
+    "alt": "Screenshot of Generative Art Gallery",
     "externalLink": "https://putawande.github.io/GenerativeArt/",
     "description": "A web gallery for interesting generative arts created by me.",
     "techstack": "Web, Generative Art - p5.js / Processing / Jekyll"
