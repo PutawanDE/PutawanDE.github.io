@@ -30,9 +30,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
 plugins:
+  - jekyll-postcss
   - jekyll-feed
+  - jekyll-seo-tag
 
 # tailwindcss JIT will not work, if cache is enabled.
 postcss:
