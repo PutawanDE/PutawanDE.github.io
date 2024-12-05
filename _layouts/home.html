@@ -2,7 +2,7 @@
 layout: base
 ---
 <div class="h-dvh overflow-y-scroll overflow-x-hidden px-5">
-  <section class="max-w-screen-lg mx-auto flex flex-col gap-8 h-full pt-5 justify-center">
+  <section class="max-w-screen-lg mx-auto flex flex-col gap-8 h-full pt-5 justify-center slide-up">
     <div class="flex flex-col w-full justify-center gap-2">
       <h1 class='text-2xl sm:text-4xl'>Hi, I'm</h1>
       <h1 class='text-2xl sm:text-5xl font-bold'>{{ site.data.personal.name }}</h1>
@@ -12,11 +12,11 @@ layout: base
       {{ site.data.personal.bio }}
     </p>
     <div class="flex flex-row gap-2 flex-wrap">
-      <div class="border-white border-solid border p-4 w-64 rounded-md">
+      <div class="card">
         <p class="text-lg">Cross Platform Development using <a href="https://flutter.dev/" target="_blank"
             rel="noopenner noreferrer">Flutter</a></p>
       </div>
-      <div class="border-white border-solid border p-4 w-64 rounded-md">
+      <div class="card">
         <p class="text-lg">Web Development using <a href="https://react.dev/" target="_blank"
             rel="noopenner noreferrer">React</a>
           and <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a></p>
@@ -28,34 +28,33 @@ layout: base
   </section>
 
   <section class="h-dvh max-w-screen-lg mx-auto py-5">
-    <div class="border-white border-b-2">
+    <div class="border-white border-b-2 mb-6">
       <h2 class="text-4xl">Education</h2>
     </div>
     {% for e in site.data.education %}
-    <div class="flex flex-col sm:flex-row my-5 text-xl gap-4">
+    <div class="flex flex-col sm:flex-row mb-6 text-xl gap-4">
       <p class="sm:w-1/6"><b>{{ e.period }}</b></p>
-      <p class="sm:w-4/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
-      <p class="sm:w-1/6">{{ e.location }}</p>
+      <p class="sm:w-5/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
     </div>
     {% endfor %}
 
-    <div class="border-white border-b-2">
+    <div class="border-white border-b-2 mb-6">
       <h2 class="text-4xl">Work</h2>
     </div>
     {% for w in site.data.work %}
-    <div class="flex flex-col sm:flex-row my-5 text-xl gap-4">
+    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
       <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
-      <div class="sm:w-4/6">
-        <p class="font-bold mb-3">{{ w.position }}, <a href={{ w.company_url }} target="_blank" rel="noopener noreferrer">{{ w.company }}</a></p>
+      <div class="sm:w-5/6">
+        <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} target="_blank"
+            rel="noopener noreferrer">{{ w.company }}</a></p>
         <ul>
-          {% for d in w.details | reverse %}
+          {% for d in w.details %}
           <li>{{ d }}</li>
           {% endfor %}
         </ul>
       </div>
-      <p class="sm:w-1/6">{{ w.location }}</p>
     </div>
     {% endfor %}
-
   </section>
+
 </div>

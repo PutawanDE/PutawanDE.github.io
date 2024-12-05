@@ -1,7 +1,15 @@
-- period: Nov 2023 - Feb 2024
-  title: Software Engineer
-  company: Acme Corporation
-  company_url: https://www.acme.com
-  details: 
-    - Developed and maintained software applications for the company.
-  location: Bangkok, TH
+- period: May 2024 - Present
+  title: Front-End Engineer
+  company: LTMH Public Company Limited
+  company_url: https://www.ltmh.com
+  details:
+    - Developed and maintained company's websites (LONGTUNMAN, BLOCKDIT, and others), serving over 8 million online followers using Next.js.
+
+- period: Jun 2023 - Oct 2023
+  title: Chatbot Developer Intern
+  company: Amity Solutions
+  company_url: https://www.amitysolutions.com/
+  details:
+    - Front-end development using React.js to build websites that support the Chatbot product.
+    - Used AWS Lambda, AWS Kinesis, AWS S3, Serverless to develop a data report system that is part of a Chatbot project.
+    - Used company internal tool similar to Google Dialogflow to develop NLP-based chatbots which used Intent Classification and Entity Extraction.

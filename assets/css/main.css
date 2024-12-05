@@ -76,7 +76,7 @@ li::marker {
 }
 
 #content {
-  animation: fadein 0.75s linear forwards;
+  animation: fadein 1s linear forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -95,4 +95,25 @@ li::marker {
   100% {
     opacity: 1;
   }
+}
+
+.slide-up {
+  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.card {
+  @apply border-white border-solid border p-4 w-64 rounded-md;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
