@@ -13,6 +13,16 @@ body {
   scroll-behavior: smooth;
 }
 
+.bg-shape {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+}
+
+.bg-blur {
+  filter: blur(90px);
+}
+
 a {
   @apply text-inherit cursor-pointer relative inline-flex;
 }
@@ -79,6 +89,15 @@ li::marker {
   animation: fadein 1s linear forwards;
 }
 
+.card {
+  @apply border-white border-solid border p-4 rounded-md flex items-center;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -109,11 +128,31 @@ li::marker {
     transform: translateY(0);
   }
 }
-.card {
-  @apply border-white border-solid border p-4 w-64 rounded-md;
+
+.gradient {
+  background: linear-gradient(
+    150deg,
+    #000000,
+    #020205,
+    #0e101e,
+    #21233b,
+    #3e345e,
+    #723b78,
+    #af3d73,
+    #e84545
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }
-.card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
