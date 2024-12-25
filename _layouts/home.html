@@ -18,13 +18,15 @@ layout: base
             rel="noopenner noreferrer">Flutter</a></p>
       </div>
       <div class="card w-64">
-        <p class="text-lg">Web Development using <a href="https://react.dev/" target="_blank"
+        <p class="text-lg">Web Development using <a href="https://react.dev/" class="styled-link" target="_blank"
             rel="noopenner noreferrer">React</a>
-          and <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js</a></p>
+          and <a href="https://nextjs.org/" class="styled-link" target="_blank" rel="noopener noreferrer">Next.js</a>
+        </p>
       </div>
     </div>
     <div class="text-lg">
-      <a href={{ site.data.personal.resume }} target="_blank" rel="noopener noreferrer">RESUME HERE.</a>
+      <a href={{ site.data.personal.resume }} class="styled-link" target="_blank" rel="noopener noreferrer">RESUME
+        HERE.</a>
     </div>
     <div class="animate-bounce opacity-75">
       <p>Scroll to see more...</p>
@@ -32,36 +34,60 @@ layout: base
   </section>
 </div>
 
-<section class="max-w-screen-lg mx-auto p-5">
-  <div class="border-white border-b-2 mb-6">
-    <h2 class="text-4xl">Education</h2>
-  </div>
-  {% for e in site.data.education %}
-  <div class="flex flex-col sm:flex-row mb-6 text-xl gap-4">
-    <p class="sm:w-1/6"><b>{{ e.period }}</b></p>
-    <p class="sm:w-5/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
-  </div>
-  {% endfor %}
-
-  <div class="border-white border-b-2 mb-6">
-    <h2 class="text-4xl">Work</h2>
-  </div>
-  {% for w in site.data.work %}
-  <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
-    <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
-    <div class="sm:w-5/6">
-      <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} target="_blank" rel="noopener noreferrer">{{
-          w.company }}</a></p>
-      <ul>
-        {% for d in w.details %}
-        <li>{{ d }}</li>
-        {% endfor %}
-      </ul>
+<div class="p-5">
+  <section class="max-w-screen-lg mx-auto">
+    <div class="border-white border-b-2 mb-6">
+      <h2 class="text-4xl">Education</h2>
     </div>
-  </div>
-  {% endfor %}
+    {% for e in site.data.education %}
+    <div class="flex flex-col sm:flex-row mb-6 text-xl gap-4">
+      <p class="sm:w-1/6"><b>{{ e.period }}</b></p>
+      <p class="sm:w-5/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
+    </div>
+    {% endfor %}
 
-  <div class="border-white border-b-2 mb-6">
-    <h2 class="text-4xl">Projects</h2>
-  </div>
-</section>
+    <div class="border-white border-b-2 mb-6">
+      <h2 class="text-4xl">Work</h2>
+    </div>
+    {% for w in site.data.work %}
+    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
+      <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
+      <div class="sm:w-5/6">
+        <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
+            rel="noopener noreferrer">{{
+            w.company }}</a></p>
+        <ul>
+          {% for d in w.details %}
+          <li>{{ d }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="border-white border-b-2 mb-6">
+      <h2 class="text-4xl">Projects</h2>
+    </div>
+
+    {% assign projects = site.projects | reverse %}
+    {% for p in projects %}
+    <div class="flex flex-col gap-3 mb-6">
+      <div class="flex flex-row w-full text-lg gap-2 flex-wrap">
+        <div class="w-44">
+          <a class="styled-link z-10" href={{ p.permalink }}>{{ forloop.index }}. {{ p.title }}</a>
+        </div>
+        <p class="w-44">Year {{ p.year }}</p>
+        <p class="w-44">{{ p.type }}</>
+        <p class="w-44">{{ p.tech }}</p>
+      </div>
+      <div class="flex flex-row w-full gap-4 flex-wrap">
+        {% for img in p.images %}
+        <a href={{ p.permalink }} class="w-fit" title="View Project">
+          <img src={{ img }} alt="Witch Hunter" class="styled-img" />
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</div>
