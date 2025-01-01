@@ -50,7 +50,7 @@ layout: base
       <h2 class="text-4xl">Work</h2>
     </div>
     {% for w in site.data.work %}
-    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
+    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4 leading-relaxed">
       <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
       <div class="sm:w-5/6">
         <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
@@ -71,19 +71,19 @@ layout: base
 
     {% assign projects = site.projects | reverse %}
     {% for p in projects %}
-    <div class="flex flex-col gap-3 mb-6">
-      <div class="flex flex-row w-full text-lg gap-2 flex-wrap">
-        <div class="w-44">
-          <a class="styled-link z-10" href={{ p.permalink }}>{{ forloop.index }}. {{ p.title }}</a>
+    <div class="flex flex-col gap-4 mb-24">
+      <div class="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 w-full text-lg gap-2 flex-wrap">
+        <div>
+          <a class="styled-link z-10" href={{ p.permalink }}>{{ p.title }}</a>
         </div>
-        <p class="w-44">Year {{ p.year }}</p>
-        <p class="w-44">{{ p.type }}</>
-        <p class="w-44">{{ p.tech }}</p>
+        <p>Year {{ p.year }}</p>
+        <p>{{ p.type }}</>
+        <p>{{ p.tech }}</p>
       </div>
-      <div class="flex flex-row w-full gap-4 flex-wrap">
+      <div class="grid grid-cols-4 sm:grid-cols-7 gap-6 grid-flow-row">
         {% for img in p.images %}
-        <a href={{ p.permalink }} class="w-fit" title="View Project">
-          <img src={{ img }} alt="Witch Hunter" class="styled-img" />
+        <a href={{ p.permalink }} class="self-end" style="grid-column: {{ img.grid_col }};" title="View Project">
+          <img src={{ img.src }} alt={{ img.alt }} class="styled-img" />
         </a>
         {% endfor %}
       </div>

@@ -2,11 +2,15 @@
 layout: page
 title: Airwareness
 year: 2022
-type: Mobile App
+type: Air Pollution Report App
 tech: Flutter
 images:
-    - https://via.placeholder.com/150
-    - https://via.placeholder.com/150
+  - src: /assets/img/airwareness_forecast.png
+    alt: "Project Airwareness"
+    grid_col: 1 / 3
+  - src: /assets/img/airwareness_photo.png
+    alt: "Project Airwareness"
+    grid_col: span 2
 permalink: /airwareness/
 ---
 witch hunter bla bla
