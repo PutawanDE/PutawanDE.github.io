@@ -40,7 +40,7 @@ layout: base
       <h2 class="text-4xl">Education</h2>
     </div>
     {% for e in site.data.education %}
-    <div class="flex flex-col sm:flex-row mb-6 text-xl gap-4">
+    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
       <p class="sm:w-1/6"><b>{{ e.period }}</b></p>
       <p class="sm:w-5/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
     </div>
@@ -69,25 +69,35 @@ layout: base
       <h2 class="text-4xl">Projects</h2>
     </div>
 
-    {% assign projects = site.projects | reverse %}
-    {% for p in projects %}
-    <div class="flex flex-col gap-4 mb-24">
-      <div class="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 w-full text-lg gap-2 flex-wrap">
-        <div>
-          <a class="styled-link z-10" href={{ p.permalink }}>{{ p.title }}</a>
+    <div class="project-grid">
+      {% assign projects = site.projects | reverse %}
+      {% for p in projects %}
+      <div class="border p-5 border-gray-500">
+        <div class="flex flex-col justify-between h-full gap-5">
+          <div class="flex flex-col">
+            <a href="{{ p.permalink }}" target="_blank" rel="noreferrer">
+              <img class="h-60 w-60 mx-auto object-cover styled-img mb-5" src={{ p.image.src }} alt={{ p.image.alt }} />
+            </a>
+            <!-- header -->
+            <a href="{{ p.permalink }}" target="_blank" rel="noreferrer" class="styled-link mb-4 w-fit">
+              <h3 class="text-lg">{{ p.title }}</h3>
+            </a>
+            <p class="leading-relaxed">
+              {{ p.description }}
+            </p>
+          </div>
+          <!-- footer -->
+          <div class="code">
+            <p>
+              Year - {{ p.year }}
+            </p>
+            <p>
+              {{ p.tech }}
+            </p>
+          </div>
         </div>
-        <p>Year {{ p.year }}</p>
-        <p>{{ p.type }}</>
-        <p>{{ p.tech }}</p>
       </div>
-      <div class="grid grid-cols-4 sm:grid-cols-7 gap-6 grid-flow-row">
-        {% for img in p.images %}
-        <a href={{ p.permalink }} class="self-end" style="grid-column: {{ img.grid_col }};" title="View Project">
-          <img src={{ img.src }} alt={{ img.alt }} class="styled-img" />
-        </a>
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </section>
 </div>
