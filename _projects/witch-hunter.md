@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Witch Hunter
-year: 2024
-description: Witch Hunter is a 3-player online horror game. 
-tech: Game - Unreal Engine 5
+year: "2024"
+description: "A Multiplayer Horror Game. It is inspired by medieval beliefs that demons can shape-shift into various animals and reside in the dark, eerie forests."
+type: Game
+tech: "Unreal Engine 5"
 image:
   src: /assets/img/witch_face.png
   alt: "Project Witch Hunter"
-permalink: /witch-hunter/
+permalink: https://github.com/PutawanDE/WitchHunter
 ---
-witch hunter bla bla

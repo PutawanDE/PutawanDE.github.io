@@ -41,7 +41,7 @@ postcss:
 
 collections:
   projects:
-    output: true
+    # output: true
     sort_by: year
 
 # Exclude from processing.

@@ -1,12 +1,12 @@
 ---
 layout: page
 title: CARIN
-year: 2022
-description: It is a single-player online strategy game. It features genetic code parser and interpreter for game's characters, and multi-threaded server support for concurrent playing games.
-tech: Game - Java Spring WebSocket / React / TypeScript / CSS / HTML
+year: "2022"
+description: A single-player online strategy game featuring a unique genetic code parser and interpreter for dynamic character behavior. Enjoy seamless gameplay with our multi-threaded server support, allowing for concurrent game sessions.
+type: Game
+tech: Java Spring WebSocket / React / TypeScript / CSS / HTML
 image:
   src: /assets/img/carin.png
   alt: "Project Carin"
-permalink: /carin/
+permalink: https://github.com/PutawanDE/ExpensivePigCARIN
 ---
-witch hunter bla bla
