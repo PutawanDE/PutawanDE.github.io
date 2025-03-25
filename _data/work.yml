@@ -1,9 +1,22 @@
 - period: May 2024 - Present
-  title: Front-End Engineer
+  title: Web / Mobile Front-End Developer
   company: LTMH Public Company Limited
   company_url: https://www.ltmh.com
   details:
-    - Developed and maintained company's websites (LONGTUNMAN, BLOCKDIT, and others), serving over 8 million online followers using Next.js.
+    - Developing and maintaining Next.js and Flutter applications for Blockdit and Longtunman, with over 8 million users.
+
+- period: Jun 2023 - Present
+  title: Front-End Developer
+  company: Namjai
+  details:
+    - UX/UI designer and a front-end developer using React, TypeScript, Tailwind CSS, and MUI to develop a crowd-funding platform targeted to children’s development.
+
+- period: Nov 2023 - March 2024
+  title: Front-End Developer (Volunteer)
+  company: National Assembly of Thailand
+  company_url: https://kaogeek.github.io/cons60-web/
+  details:
+    - Worked in a team as a front-end developer using React.js to develop a website that visualizes the changes made during the drafting of 2017 Constitution of Thailand.
 
 - period: Jun 2023 - Oct 2023
   title: Chatbot Developer Intern
@@ -11,5 +24,5 @@
   company_url: https://www.amitysolutions.com/
   details:
     - Front-end development using React.js to build websites that support the Chatbot product.
-    - Used AWS Lambda, AWS Kinesis, AWS S3, Serverless to develop a data report system that is part of a Chatbot project.
+    - Implemented a data reporting system leveraging AWS Lambda, Kinesis, and S3 for real-time chatbot analytics.
     - Used company internal tool similar to Google Dialogflow to develop NLP-based chatbots which used Intent Classification and Entity Extraction.
