@@ -8,5 +8,5 @@ tech: Flutter / Dart
 image:
   src: /assets/img/airwareness_photo.png
   alt: "Project Airwareness"
-permalink: /airwareness/
+permalink: https://github.com/AreYouWorking/Air-pollution-awareness
 ---
