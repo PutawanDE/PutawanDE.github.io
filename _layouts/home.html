@@ -62,7 +62,7 @@ layout: base
       <h2 class="text-4xl">Work</h2>
     </div>
     {% for w in site.data.work %}
-    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4 leading-relaxed">
+    <div class="flex flex-col sm:flex-row mb-6 text-lg sm:gap-4 leading-relaxed">
       <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
       <div class="sm:w-5/6">
         <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
