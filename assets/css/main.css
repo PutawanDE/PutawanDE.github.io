@@ -23,7 +23,7 @@ body {
 }
 
 .bg-blur {
-  filter: blur(30px);
+  filter: blur(90px);
   transform: translate3d(0, 0, 0); /* Enable GPU acceleration */
   will-change: filter; /* Hint for better performance */
 }
@@ -79,8 +79,8 @@ footer {
   margin-top: auto;
 }
 
-li::marker {
-  content: "- ";
+li {
+  list-style-type: "- ";
 }
 
 .code {
