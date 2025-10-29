@@ -23,7 +23,9 @@ body {
 }
 
 .bg-blur {
-  filter: blur(90px);
+  filter: blur(30px);
+  transform: translate3d(0, 0, 0); /* Enable GPU acceleration */
+  will-change: filter; /* Hint for better performance */
 }
 
 .styled-link {
