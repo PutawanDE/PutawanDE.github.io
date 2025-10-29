@@ -3,13 +3,16 @@
   company: LTMH Public Company Limited
   company_url: https://www.ltmh.com
   details:
-    - Developing and maintaining Next.js and Flutter applications for Blockdit and Longtunman, with over 8 million users.
+    - Developed and maintained Next.js websites "Blockdit", company's websites "Longtunman", and internal tools serving over 2 million users, ensuring high performance and scalability.
+    - Integrated secure user authentication using NextAuth with backend APIs, improving login reliability and session consistency.
+    - Implemented a proof-of-concept cloud deployment for company's websites using AWS to explore scalability and cost optimization.
+    - Developed core user-facing features for a wealth tech mobile application "WealthX" using Flutter, collaborating closely with backend and product teams.
 
 - period: Jun 2023 - Present
   title: Front-End Developer
   company: Namjai
   details:
-    - UX/UI designer and a front-end developer using React, TypeScript, Tailwind CSS, and MUI to develop a crowd-funding platform targeted to children’s development.
+    - UX/UI designer and a front-end developer using React, TypeScript, Tailwind CSS, and MUI to develop a crowd-funding platform targeted to children's development.
 
 - period: Nov 2023 - March 2024
   title: Front-End Developer (Volunteer)

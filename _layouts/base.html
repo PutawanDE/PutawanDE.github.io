@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    <main>
-      <div id="content">
-        {{ content }}
-      </div>
-    </main>
+  <main id="content">
+    <nav id="navbar" class="py-2 sm:py-5 px-5 absolute w-full z-50">
+      <div class="mx-auto max-w-screen-lg w-full text-white">
+        <div class="flex flex-row justify-end gap-8 items-center p-2">
+          <a href="{{ site.baseurl }}/" class="sm:text-xl styled-link">Home</a>
+          <a href="{{ site.baseurl }}/about" class="sm:text-xl styled-link">About</a>
+        </div>
+        </>
+    </nav>
+    <div>
+      {{ content }}
+    </div>
+  </main>
 
 
-  </body>
+</body>
 
 </html>
