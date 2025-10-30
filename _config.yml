@@ -29,7 +29,7 @@ github_username:  "PutawanDE"
 
 # Build settings
 plugins:
-  - jekyll-postcss
+  - jekyll-postcss-v2
   - jekyll-feed
   - jekyll-seo-tag
 
