@@ -2,7 +2,7 @@
 layout: base
 ---
 <div class="[@media(max-height:700px)]:h-full h-dvh px-5">
-  <div class="bg-shape bg-gradient absolute right-1/4 top-1/2 bg-blur"></div>
+  <div class="bg-blob absolute right-1/4 top-1/2"></div>
   <section class="max-w-screen-lg mx-auto flex flex-col gap-8 h-full pt-5 justify-center slide-up">
     <div class="flex flex-col w-full justify-center gap-2">
       <h1 class='text-xl sm:text-4xl'>Hi, I'm</h1>
@@ -68,7 +68,7 @@ layout: base
         <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
             rel="noopener noreferrer">{{
             w.company }}</a></p>
-        <ul>
+        <ul class="leading-relaxed">
           {% for d in w.details %}
           <li>{{ d }}</li>
           {% endfor %}
