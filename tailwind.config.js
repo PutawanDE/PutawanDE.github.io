@@ -8,8 +8,11 @@ module.exports = {
     './*.html',
   ],
   theme: {
-    theme: {
-      extend: {},
+    extend: {
+      colors: {
+        'ghost-white': 'var(--color-ghost-white)',
+        'raisin-black': 'var(--color-raisin-black)',
+      }
     },
   },
   plugins: []

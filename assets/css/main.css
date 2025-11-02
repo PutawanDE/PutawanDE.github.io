@@ -7,9 +7,12 @@
 
 :root {
   color-scheme: dark;
+  --color-ghost-white: #f4f2fa;
+  --color-raisin-black: #1c1a1f;
 }
+
 body {
-  color: #F4F2FA;
+  color: #f4f2fa;
   background-color: #1c1a1f;
   font-family: "Atkinson Hyperlegible", sans-serif;
   min-height: 100vh;
@@ -85,7 +88,7 @@ li {
 }
 
 .card {
-  @apply border-white border-solid border p-4 rounded-md flex items-center;
+  @apply border-ghost-white border-solid border p-4 rounded-md flex items-center;
 }
 .card:hover,
 .styled-img:hover {
