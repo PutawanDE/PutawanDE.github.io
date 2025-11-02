@@ -9,6 +9,7 @@
   color-scheme: dark;
   --color-ghost-white: #f4f2fa;
   --color-raisin-black: #1c1a1f;
+  --color-cool-gray: #8A8F98;
 }
 
 body {
@@ -66,10 +67,6 @@ body {
   z-index: 1;
 }
 
-footer {
-  margin-top: auto;
-}
-
 li {
   list-style-type: "- ";
 }
@@ -83,7 +80,7 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-#content {
+#content,footer {
   animation: fadein 1s linear forwards;
 }
 
@@ -145,7 +142,7 @@ li {
   width: 300px;
   height: 300px;
   border-radius: 100%;
-  filter: blur(40px);
+  filter: blur(90px);
   transform: translate3d(0, 0, 0); /* Enable GPU acceleration */
   will-change: filter; /* Hint for better performance */
 }

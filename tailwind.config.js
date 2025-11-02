@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         'ghost-white': 'var(--color-ghost-white)',
         'raisin-black': 'var(--color-raisin-black)',
+        'cool-gray': 'var(--color-cool-gray)',
       }
     },
   },

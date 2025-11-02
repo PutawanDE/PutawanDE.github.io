@@ -1,0 +1,6 @@
+- href: /
+  icon: home
+  label: Home
+- href: /blog
+  icon: article
+  label: Blog
