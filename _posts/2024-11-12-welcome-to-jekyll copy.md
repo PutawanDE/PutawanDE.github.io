@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I tried out Flutter’s new rendering engine “Impeller”."
+title:  "I tried out Flutter’s new rendering engine “Impeller” 2."
 date:   2024-11-12 22:50:02 +0700
 tags: ["Flutter", "Computer Graphic", "Mobile Development"]
 read_time: 10 min

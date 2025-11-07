@@ -9,7 +9,7 @@
   color-scheme: dark;
   --color-ghost-white: #f4f2fa;
   --color-raisin-black: #1c1a1f;
-  --color-cool-gray: #8A8F98;
+  --color-cool-gray: #8a8f98;
 }
 
 body {
@@ -45,13 +45,15 @@ body {
   width: 0%;
 }
 
-.styled-link:hover::before {
+.styled-link:hover::before,
+.group:hover .styled-link::before {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.styled-link:hover::after {
+.styled-link:hover::after,
+.group:hover .styled-link::after {
   width: 100%;
   transform-origin: left;
   transition: width 0.75s cubic-bezier(0.19, 1, 0.22, 1);
@@ -80,7 +82,7 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-#content,footer {
+.fadein-content {
   animation: fadein 1s linear forwards;
 }
 
