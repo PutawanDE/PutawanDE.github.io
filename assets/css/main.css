@@ -89,11 +89,9 @@ li {
 .card {
   @apply border-ghost-white border-solid border p-4 rounded-md flex items-center;
 }
-.card:hover,
-.styled-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+.styled-img {
+  @apply transition-transform duration-300 ease-out group-hover:scale-105 hover:scale-105;
 }
 
 @-webkit-keyframes fadein {
