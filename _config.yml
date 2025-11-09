@@ -32,6 +32,7 @@ plugins:
   - jekyll-postcss-v2
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-target-blank
 
 # tailwindcss JIT will not work, if cache is enabled.
 postcss:
