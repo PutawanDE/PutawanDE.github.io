@@ -17,7 +17,7 @@ layout: base
           <span>·</span>
           <span class="text-cool-gray" itemprop="timeRequired">{{ page.read_time }} min read</span>
         <h1 class="text-3xl sm:text-4xl" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="sm:text-lg text-cool-gray code">{{ page.tags | join: ", "}}</p>
+        <p class="text-lg sm:text-xl text-cool-gray code">{{ page.tags | join: ", "}}</p>
       </header>
 
       <div class="markdown-body" itemprop="articleBody">

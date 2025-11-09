@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "I tried out Flutter’s new rendering engine “Impeller”."
+title:  Formatting
 tags: ["Flutter", "Computer Graphic", "Mobile Development"]
 read_time: 10
-cover: /assets/images/posts/flutter-impeller/cover.png
+# cover: /assets/images/posts/flutter-impeller/cover.png
 ---
 # Heading 1
 

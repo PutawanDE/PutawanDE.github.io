@@ -169,44 +169,44 @@ ul {
   }
 
   .markdown-body h2 {
-    @apply text-xl sm:text-3xl mt-6 mb-3;
+    @apply text-3xl mt-6 mb-3;
   }
 
   .markdown-body h3 {
-    @apply text-lg sm:text-xl mt-4 mb-2;
+    @apply text-2xl mt-4 mb-2;
   }
 
   .markdown-body p {
-    @apply mb-4 text-base leading-relaxed text-ghost-white;
+    @apply mb-4 text-lg leading-relaxed text-ghost-white;
   }
 
   .markdown-body a {
-    @apply text-indigo-400 underline hover:text-indigo-300;
+    @apply text-indigo-400 underline text-lg hover:text-indigo-300;
   }
 
   .markdown-body ul {
-    @apply list-inside mb-4 pl-4;
+    @apply list-inside mb-4 pl-4 text-lg;
     list-style-type: "- ";
   }
 
   .markdown-body ol {
-    @apply list-decimal list-inside mb-4 pl-4;
+    @apply list-decimal list-inside mb-4 pl-4 text-lg;
   }
 
   .markdown-body blockquote {
-    @apply border-l-4 border-gray-500 pl-4 italic text-ghost-white my-6;
+    @apply border-l-4 border-gray-500 pl-4 italic text-ghost-white my-6 text-lg;
   }
 
   .markdown-body code {
-    @apply px-1 py-0.5 bg-[#272822] text-[#f8f8f2] font-atkinsonMono tracking-normal text-sm;
+    @apply px-1 py-0.5 bg-[#272822] text-[#f8f8f2] font-atkinsonMono tracking-normal text-base;
   }
 
   .markdown-body pre {
-    @apply text-ghost-white rounded-lg p-4 overflow-x-auto my-6;
+    @apply text-ghost-white rounded-lg p-4 overflow-x-auto my-6 text-lg;
   }
 
   .markdown-body img {
-    @apply rounded-lg my-4;
+    @apply my-4;
   }
 
   .markdown-body hr {
@@ -214,7 +214,7 @@ ul {
   }
 
   .markdown-body table {
-    @apply w-full border-collapse text-sm my-6;
+    @apply w-full border-collapse text-base my-6;
     display: block; /* allow overflow on the table itself */
     width: 100%;
     overflow-x: auto;
