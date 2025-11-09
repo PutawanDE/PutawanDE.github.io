@@ -1,38 +1,28 @@
 ---
 layout: base
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="p-5">
+  <div class="max-w-screen-lg mx-auto">
+    <div class="flex justify-end">
+      {%- include navbar.html -%}
+    </div>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
-        </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
-  </header>
+    <article class="space-y-4 sm:space-y-8 my-8" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+      <header class="flex gap-4 sm:gap-8 flex-col items-center text-center">
+        <p class="space-x-2 sm:text-lg">
+          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date_to_string: "ordinal", "US" }}
+          </time>
+          <span>·</span>
+          <span class="text-cool-gray" itemprop="timeRequired">{{ page.read_time }} min read</span>
+        <h1 class="text-3xl sm:text-4xl" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="sm:text-lg text-cool-gray code">{{ page.tags | join: ", "}}</p>
+      </header>
+
+      <div class="markdown-body" itemprop="articleBody">
+        {{ content }}
+      </div>
+    </article>
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</div>

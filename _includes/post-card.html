@@ -28,18 +28,18 @@
     <div class="flex flex-col gap-3">
       <!-- Meta Info -->
       <div class="flex items-center gap-2 text-ghost-white">
-        <time datetime="{{ item.date }}">{{ item.date | date_to_string: "ordinal", "US" }}</time>
+        <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date_to_string: "ordinal", "US" }}</time>
         <span>·</span>
-        <span class="text-cool-gray">{{ item.read_time }}</span>
+        <span class="text-cool-gray">{{ item.read_time }} min</span>
       </div>
 
       <!-- Title -->
-      <h2 class="text-xl sm:text-2xl font-bold text-white line-clamp-2">
+      <h2 class="text-xl sm:text-2xl font-bold text-ghost-white line-clamp-2">
         {{ item.title }}
       </h2>
 
       <!-- Tags -->
-      <p class="text-gray-400 code">
+      <p class="text-cool-gray code">
         {{ item.tags | join: ", "}}
       </p>
     </div>

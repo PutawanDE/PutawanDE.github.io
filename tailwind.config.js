@@ -13,7 +13,13 @@ module.exports = {
         'ghost-white': 'var(--color-ghost-white)',
         'raisin-black': 'var(--color-raisin-black)',
         'cool-gray': 'var(--color-cool-gray)',
-      }
+      },
+      fontFamily: {
+        // body and headings
+        atkinson: ["'Atkinson Hyperlegible'", "sans-serif"],
+        // monospace for code blocks
+        atkinsonMono: ["'Atkinson Hyperlegible Mono'", "monospace"],
+      },
     },
   },
   plugins: []
