@@ -41,7 +41,7 @@ I noticed immediately that Skia spent a lot of frame time compiling shaders when
 
 Impeller supports MSAA (Multisample Anti-Aliasing), a modern technique that smooths jagged edges along geometry in your UI. MSAA is more computationally expensive than the anti-aliasing previously used in Skia, but it produces higher-quality, smoother edges. Although more expensive, modern mobile devices can handle it without issues.
 
-One particular issue that MSAA helps address is the thin gaps that can appear between two adjacent containers of the same color, caused by subpixel rounding errors in the UI. This improved anti-aliasing may help close those gaps, making the UI appear more polished and seamless.
+One particular issue that MSAA helps address is the thin gaps that can appear between two adjacent containers of the same color, caused by sub-pixel rounding errors in the UI. This improved anti-aliasing may help close those gaps, making the UI appear more polished and seamless.
 
 <p align="center" markdown="1">
 <img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/thin-gap-problem.jpg" alt="Thin gap between two adjacent containers of the same color" class="max-w-72"/>
@@ -61,7 +61,7 @@ I, along with others, have observed text jitter when over-scrolling lists on And
 
 You can view open Impeller-related issues on [Github](https://github.com/flutter/flutter/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22e%3A%20impeller%22). Most of these issues are related to performance and rendering on Android devices, which can vary due to hardware, screen resolution, and driver differences. I believe the Flutter team is actively addressing these issues, and I look forward to the improvements. From my experience, Impeller has improved significantly since earlier versions, at least on my device.
 
-You can see issues regarding Impeller on . I believe, Flutter team is actively fixing these issues and I am looking forward to it. Most issues are performance, rendering issues on Android devices. Because devices vary by hardware, screen resolution, and driver support. I've tried Impeller before this version and I have to say it has improved a lot since then, at least on my device.
+You can see issues regarding Impeller on . I believe, Flutter team is actively fixing these issues and I am looking forward to it. Most issues are performance, rendering issues on Android devices. Because devices vary by hardware, screen resolution, and driver support. I've tried Impeller before this version and I have to say it has improved greatly since then, at least on my device.
 
 ## Conclusion
 
