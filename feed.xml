@@ -1,17 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://putawande.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://putawande.github.io/" rel="alternate" type="text/html" /><updated>2025-10-30T19:49:05+00:00</updated><id>https://putawande.github.io/feed.xml</id><title type="html">Tanadol Deachprapakorn</title><subtitle>Tanadol Deachprapakorn&apos;s personal website</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="https://putawande.github.io/jekyll/update/2024/11/12/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2024-11-12T15:50:02+00:00</published><updated>2024-11-12T15:50:02+00:00</updated><id>https://putawande.github.io/jekyll/update/2024/11/12/welcome-to-jekyll</id><content type="html" xml:base="https://putawande.github.io/jekyll/update/2024/11/12/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://putawande.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://putawande.github.io/" rel="alternate" type="text/html" /><updated>2025-11-10T16:25:57+00:00</updated><id>https://putawande.github.io/feed.xml</id><title type="html">Tanadol Deachprapakorn</title><subtitle>Tanadol Deachprapakorn&apos;s personal website</subtitle><entry><title type="html">I Tried Out Flutter’s New Rendering Engine: Impeller</title><link href="https://putawande.github.io/i-tried-out-flutter-s-new-rendering-engine-impeller" rel="alternate" type="text/html" title="I Tried Out Flutter’s New Rendering Engine: Impeller" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://putawande.github.io/i-tried-out-flutter%E2%80%99s-new-rendering-engine-impeller</id><content type="html" xml:base="https://putawande.github.io/i-tried-out-flutter-s-new-rendering-engine-impeller"><![CDATA[<h2 id="introduction">Introduction</h2>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>Flutter, Google’s open-source UI software development kit, has been making waves in the mobile development community. Recently, I had the opportunity to explore Flutter’s new rendering engine, Impeller. In this post, I’ll share my experience and insights on how Impeller enhances Flutter’s performance and graphics capabilities.</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<h2 id="background">Background</h2>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>Before Impeller, Flutter relied on the Skia graphics library for rendering. Skia performed well overall but had limitations, especially with complex animations and high-performance graphics. At one point, I experimented with custom GLSL shaders inside Flutter — and ran into a problem: shader compilation.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>A shader is a tiny program that runs on your GPU and decides how each pixel should look. Like any program, it must be compiled before execution. The tricky part is that GPUs vary widely in architecture and supported instructions. For example, gamers may know that features like DLSS exist on NVIDIA hardware but not on AMD. To handle this variety, many GPU drivers compile shaders on demand at runtime.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>That’s why, when you launch a new game for the first time, it often loads for a while before gameplay begins — the GPU is compiling shaders in the background. Flutter’s rendering pipeline worked in a similar way. The first time you navigate to a new screen or trigger a new animation, you might notice stutters or dropped frames, known as animation jank.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>Enter Impeller. Impeller solves this problem by using precompiled sets of shaders — compiled offline ahead of runtime — and is built to leverage modern graphics APIs such as Metal on iOS and Vulkan on Android (falling back to OpenGL ES on older devices). Previously, Flutter’s Skia backend used Metal on iOS and OpenGL ES on Android. Impeller’s build-time shader compiler converts GLSL into a GPU-specific intermediate representation, ensuring shaders can load instantly without per-frame compilation.</p>
+
+<p align="center">
+<img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/what_is_vulkan_compared_to_gl.png" alt="What is Vulkan compared to OpenGL?" />
+<em>Figure 1: Vulkan vs. OpenGL <a href="https://docs.vulkan.org/guide/latest/what_is_vulkan.html">source</a></em>
+</p>
+
+<h2 id="trying-out-impeller">Trying Out Impeller</h2>
+
+<h3 id="performance">Performance</h3>
+
+<p>I used Flutter version 3.35.0. In this version, Impeller is enabled by default on iOS, and on Android it runs when Vulkan is available. I tested Impeller on a Vulkan-supported Android device to observe noticeable performance differences. I ran the app in profile mode to collect accurate frame-time data using Flutter DevTools.</p>
+
+<p align="center">
+<img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/shader-compilation-frames-chart.png" alt="Shader Compilation Frames Chart" />
+<em>Figure 2: Profiling chart showing shader compilation time in dark red color <a href="https://docs.flutter.dev/tools/devtools/performance">source</a></em>
+</p>
+
+<p>I noticed immediately that Skia spent a lot of frame time compiling shaders when opening the splash screen, a bottom sheet, and a new screen. These compilation pauses caused animation jank during page transitions, which reduces the polish of the app. Impeller, on the other hand, produced smoother and more predictable frame rates, although the average FPS did not differ significantly between the two engines.</p>
+
+<h3 id="anti-aliasing">Anti-Aliasing</h3>
+
+<p>Impeller supports MSAA (Multisample Anti-Aliasing), a modern technique that smooths jagged edges along geometry in your UI. MSAA is more computationally expensive than the anti-aliasing previously used in Skia, but it produces higher-quality, smoother edges. Although more expensive, modern mobile devices can handle it without issues.</p>
+
+<p>One particular issue that MSAA helps address is the thin gaps that can appear between two adjacent containers of the same color, caused by sub-pixel rounding errors in the UI. This improved anti-aliasing may help close those gaps, making the UI appear more polished and seamless.</p>
+
+<p align="center">
+<img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/thin-gap-problem.jpg" alt="Thin gap between two adjacent containers of the same color" class="max-w-72" />
+<em>Figure 3: Thin gap between two adjacent containers of the same color <a href="https://github.com/flutter/flutter/issues/14288#issuecomment-1156754187">source</a></em>
+</p>
+
+<h3 id="text-rendering">Text Rendering</h3>
+
+<p>I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia.</p>
+
+<p align="center">
+<video src="https://private-user-images.githubusercontent.com/31311349/505224418-200adaf1-0a10-42e0-b7c1-a739bf971884.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI3MTgxNjAsIm5iZiI6MTc2MjcxNzg2MCwicGF0aCI6Ii8zMTMxMTM0OS81MDUyMjQ0MTgtMjAwYWRhZjEtMGExMC00MmUwLWI3YzEtYTczOWJmOTcxODg0Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTA5VDE5NTEwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU5YWFkMTY4YzEyYzE3ODdjN2RlMjU0NWNiMDFkNDFjNGNjZjMxMmMyODdlOWNjMzMxMGVmMGJmZjUxOGEyYzgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.RoCzvbkOc4X-jUu2HqcLqjK6kjSJfE8QO4tSqa7WIco" data-canonical-src="https://private-user-images.githubusercontent.com/31311349/505224418-200adaf1-0a10-42e0-b7c1-a739bf971884.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjI3MTgxNjAsIm5iZiI6MTc2MjcxNzg2MCwicGF0aCI6Ii8zMTMxMTM0OS81MDUyMjQ0MTgtMjAwYWRhZjEtMGExMC00MmUwLWI3YzEtYTczOWJmOTcxODg0Lm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMDklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTA5VDE5NTEwMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU5YWFkMTY4YzEyYzE3ODdjN2RlMjU0NWNiMDFkNDFjNGNjZjMxMmMyODdlOWNjMzMxMGVmMGJmZjUxOGEyYzgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.RoCzvbkOc4X-jUu2HqcLqjK6kjSJfE8QO4tSqa7WIco" controls="controls" muted="muted" style="max-height:640px; min-height: 200px"></video>
+<em>Figure 4: Text jitter when over-scrolling lists on Android <a href="https://github.com/flutter/flutter/issues/177492">source</a></em>
+</p>
+
+<h3 id="other-problems">Other Problems</h3>
+
+<p>You can view open Impeller-related issues on <a href="https://github.com/flutter/flutter/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22e%3A%20impeller%22">Github</a>. Most of these issues are related to performance and rendering on Android devices, which can vary due to hardware, screen resolution, and driver differences. I believe the Flutter team is actively addressing these issues, and I look forward to the improvements. From my experience, Impeller has improved significantly since earlier versions, at least on my device.</p>
+
+<p>You can see issues regarding Impeller on . I believe, Flutter team is actively fixing these issues and I am looking forward to it. Most issues are performance, rendering issues on Android devices. Because devices vary by hardware, screen resolution, and driver support. I’ve tried Impeller before this version and I have to say it has improved greatly since then, at least on my device.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Impeller is a promising rendering engine and a solid choice for modern devices. It is designed specifically for Flutter and leverages modern graphics APIs and hardware capabilities, such as MSAA, to improve rendering quality.</p>
+
+<p>During my trial, Impeller delivered smoother and more predictable performance, and its improved anti-aliasing produces higher-quality visuals that may help address sub-pixel rendering issues. While there are still some performance and text-rendering issues on certain Android devices, the team is actively working on fixes. Since Impeller is still early in adoption, it is natural that there might be some bugs with edge cases.</p>
+
+<h2 id="references-and-further-readings">References and Further Readings</h2>
+
+<ul>
+  <li><a href="https://github.com/flutter/flutter/issues/14288">Antialiasing behaviour when same-colour  #14288</a></li>
+  <li><a href="https://youtu.be/vd5NqS01rlA?si=euMPrcZvlN8gAKVh">Introducing Impeller - Flutter’s new rendering engine</a></li>
+  <li><a href="https://docs.flutter.dev/perf/impeller">Impeller rendering engine</a></li>
+  <li><a href="https://docs.vulkan.org/guide/latest/what_is_vulkan.html">What is Vulkan?</a></li>
+  <li><a href="https://docs.flutter.dev/tools/devtools/performance">Use the Performance view</a></li>
+  <li><a href="https://github.com/flutter/flutter/issues/167795">[Android] Stretch overscroll causes text jitter when using Impeller #167795</a></li>
+  <li><a href="https://github.com/flutter/flutter/issues/162949">[Impeller] Rendered Text Wiggles when scaling #162949</a></li>
+  <li><a href="https://vr.arvilab.com/blog/anti-aliasing">The Meaning of Anti-Aliasing: FXAA, SMAA, MSAA, SSAA, TXAA Algorithms</a></li>
+</ul>]]></content><author><name></name></author><category term="Flutter" /><category term="Computer Graphic" /><category term="Mobile Development" /><summary type="html"><![CDATA[Introduction]]></summary></entry></feed>
