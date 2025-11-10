@@ -50,16 +50,7 @@ One particular issue that MSAA helps address is the thin gaps that can appear be
 
 ### Text Rendering
 
-I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia.
-
-<p align="center" markdown="1">
-  <!-- <video src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" controls="controls" muted="muted" style="max-height:640px; min-height: 200px" /> -->
-  <video controls="controls" muted="muted" style="max-height:640px; min-height: 200px">
-    <source src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-*Figure 4: Text jitter when over-scrolling lists on Android [source](https://github.com/flutter/flutter/issues/177492)*
-</p>
+I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia. You can see the issue [here](https://github.com/flutter/flutter/issues/177492).
 
 ### Other Problems
 
