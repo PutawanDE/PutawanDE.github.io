@@ -1,9 +1,12 @@
 ---
 layout: base
 ---
-<div class="[@media(max-height:700px)]:h-full h-dvh px-5">
-  <div class="bg-shape bg-gradient absolute right-1/4 top-1/2 bg-blur"></div>
+<div class="[@media(max-height:700px)]:h-full h-dvh px-5 fadein-content">
+  <div class="bg-blob absolute right-1/4 top-1/2"></div>
   <section class="max-w-screen-lg mx-auto flex flex-col gap-8 h-full pt-5 justify-center slide-up">
+    <div class="absolute top-5 right-0">
+      {%- include navbar.html -%}
+    </div>
     <div class="flex flex-col w-full justify-center gap-2">
       <h1 class='text-xl sm:text-4xl'>Hi, I'm</h1>
       <h1 class='text-2xl sm:text-5xl'>{{ site.data.personal.name }}</h1>
@@ -48,7 +51,7 @@ layout: base
 
 <div class="p-5">
   <section class="max-w-screen-lg mx-auto">
-    <div class="border-white border-b-2 mb-6">
+    <div class="border-ghost-white border-b-2 mb-6">
       <h2 class="text-4xl">Education</h2>
     </div>
     {% for e in site.data.education %}
@@ -58,7 +61,7 @@ layout: base
     </div>
     {% endfor %}
 
-    <div class="border-white border-b-2 mb-6">
+    <div class="border-ghost-white border-b-2 mb-6">
       <h2 class="text-4xl">Work</h2>
     </div>
     {% for w in site.data.work %}
@@ -68,7 +71,7 @@ layout: base
         <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
             rel="noopener noreferrer">{{
             w.company }}</a></p>
-        <ul>
+        <ul class="leading-relaxed">
           {% for d in w.details %}
           <li>{{ d }}</li>
           {% endfor %}
@@ -77,7 +80,7 @@ layout: base
     </div>
     {% endfor %}
 
-    <div class="border-white border-b-2 mb-8">
+    <div class="border-ghost-white border-b-2 mb-8">
       <h2 class="text-4xl">Projects</h2>
     </div>
 

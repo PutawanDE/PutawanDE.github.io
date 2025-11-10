@@ -1,0 +1,47 @@
+{% assign item = include.item %}
+<a href="{{ item.url }}">
+  <article class="flex flex-col sm:flex-row gap-4 sm:gap-7 group cursor-pointer">
+    <!-- Image Container -->
+    {% assign random_index = item.title | size | modulo: 8 %}
+    <div class="flex-shrink-0 h-56 w-full sm:w-56 sm:h-40 overflow-hidden bg-gradient-to-br 
+    {% case random_index %}
+      {% when 0 %}from-cyan-400 to-blue-300
+      {% when 1 %}from-purple-400 to-pink-300
+      {% when 2 %}from-orange-400 to-red-300
+      {% when 3 %}from-green-400 to-emerald-300
+      {% when 4 %}from-indigo-400 to-purple-300
+      {% when 5 %}from-yellow-400 to-orange-300
+      {% when 6 %}from-pink-400 to-rose-300
+      {% when 7 %}from-teal-400 to-cyan-300
+    {% endcase %}
+    styled-img">
+      {% if item.image %}
+      <img src="{{ item.image }}" alt="{{ item.title }}"
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+      {% else %}
+      <!-- Placeholder gradient if no image -->
+      <div class="w-full h-full"></div>
+      {% endif %}
+    </div>
+
+    <!-- Content Container -->
+    <div class="flex flex-col gap-3">
+      <!-- Meta Info -->
+      <div class="flex items-center gap-2 text-ghost-white">
+        <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date_to_string: "ordinal", "US" }}</time>
+        <span>·</span>
+        <span class="text-cool-gray">{{ item.read_time }} min</span>
+      </div>
+
+      <!-- Title -->
+      <h2 class="text-xl sm:text-2xl font-bold text-ghost-white line-clamp-2">
+        {{ item.title }}
+      </h2>
+
+      <!-- Tags -->
+      <p class="text-cool-gray code">
+        {{ item.tags | join: ", "}}
+      </p>
+    </div>
+  </article>
+</a>

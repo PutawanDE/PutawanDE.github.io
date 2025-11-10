@@ -7,25 +7,17 @@
 
 :root {
   color-scheme: dark;
+  --color-ghost-white: #f4f2fa;
+  --color-raisin-black: #1c1a1f;
+  --color-cool-gray: #8a8f98;
 }
+
 body {
-  color: white;
+  @apply font-atkinson;
+  color: #f4f2fa;
   background-color: #1c1a1f;
-  font-family: "Atkinson Hyperlegible", sans-serif;
   min-height: 100vh;
   scroll-behavior: smooth;
-}
-
-.bg-shape {
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-}
-
-.bg-blur {
-  filter: blur(90px);
-  transform: translate3d(0, 0, 0); /* Enable GPU acceleration */
-  will-change: filter; /* Hint for better performance */
 }
 
 .styled-link {
@@ -53,13 +45,15 @@ body {
   width: 0%;
 }
 
-.styled-link:hover::before {
+.styled-link:hover::before,
+.group:hover .styled-link::before {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.styled-link:hover::after {
+.styled-link:hover::after,
+.group:hover .styled-link::after {
   width: 100%;
   transform-origin: left;
   transition: width 0.75s cubic-bezier(0.19, 1, 0.22, 1);
@@ -75,11 +69,7 @@ body {
   z-index: 1;
 }
 
-footer {
-  margin-top: auto;
-}
-
-li {
+ul {
   list-style-type: "- ";
 }
 
@@ -92,18 +82,16 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-#content {
+.fadein-content {
   animation: fadein 1s linear forwards;
 }
 
 .card {
-  @apply border-white border-solid border p-4 rounded-md flex items-center;
+  @apply border-ghost-white border-solid border p-4 rounded-md flex items-center;
 }
-.card:hover,
-.styled-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+.styled-img {
+  @apply transition-transform duration-300 ease-out group-hover:scale-105 hover:scale-105;
 }
 
 @-webkit-keyframes fadein {
@@ -137,7 +125,7 @@ li {
   }
 }
 
-.bg-gradient {
+.bg-blob {
   background: linear-gradient(
     150deg,
     #000000,
@@ -151,6 +139,12 @@ li {
   );
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  filter: blur(90px);
+  transform: translate3d(0, 0, 0); /* Enable GPU acceleration */
+  will-change: filter; /* Hint for better performance */
 }
 
 @keyframes gradientAnimation {
@@ -162,5 +156,85 @@ li {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@layer components {
+  .markdown-body {
+    @apply max-w-none leading-relaxed tracking-[0.01em];
+  }
+
+  .markdown-body h1 {
+    @apply text-2xl sm:text-4xl mt-8 mb-4;
+  }
+
+  .markdown-body h2 {
+    @apply text-3xl mt-6 mb-3;
+  }
+
+  .markdown-body h3 {
+    @apply text-2xl mt-4 mb-2;
+  }
+
+  .markdown-body p {
+    @apply mb-4 text-lg leading-relaxed text-ghost-white;
+  }
+
+  .markdown-body a {
+    @apply text-indigo-400 underline text-lg hover:text-indigo-300;
+  }
+
+  .markdown-body ul {
+    @apply list-inside mb-4 pl-4 text-lg;
+    list-style-type: "- ";
+  }
+
+  .markdown-body ol {
+    @apply list-decimal list-inside mb-4 pl-4 text-lg;
+  }
+
+  .markdown-body blockquote {
+    @apply border-l-4 border-gray-500 pl-4 italic text-ghost-white my-6 text-lg;
+  }
+
+  .markdown-body code {
+    @apply px-1 py-0.5 bg-[#272822] text-[#f8f8f2] font-atkinsonMono tracking-normal text-base;
+  }
+
+  .markdown-body pre {
+    @apply text-ghost-white rounded-lg p-4 overflow-x-auto my-6 text-lg;
+  }
+
+  .markdown-body img {
+    @apply my-4;
+  }
+
+  .markdown-body hr {
+    @apply border-ghost-white my-8;
+  }
+
+  .markdown-body table {
+    @apply w-full border-collapse text-base my-6;
+    display: block; /* allow overflow on the table itself */
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .markdown-body th,
+  .markdown-body td {
+    @apply border border-ghost-white px-3 py-2 font-atkinsonMono tracking-normal;
+  }
+
+  .markdown-body th {
+    @apply bg-ghost-white font-bold text-black border-black;
+  }
+
+  .markdown-body strong {
+    @apply font-bold text-ghost-white;
+  }
+
+  .markdown-body em {
+    @apply italic text-ghost-white;
   }
 }

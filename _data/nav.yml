@@ -1,0 +1,7 @@
+# icon must be from Material Symbols Outlined, make sure to include it in the link of head.html file.
+- href: /
+  icon: home
+  label: Home
+- href: /blog
+  icon: article
+  label: Blog

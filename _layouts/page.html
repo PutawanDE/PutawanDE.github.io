@@ -1,14 +1,12 @@
 ---
 layout: base
 ---
-<article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
+<div class="p-5">
+  <div class="max-w-screen-lg mx-auto">
+    <div class="flex justify-between">
+      <h1 class="text-2xl sm:text-4xl">{{ page.title }}</h1>
+      {%- include navbar.html -%}
+    </div>
+    {{ content}}
   </div>
-
-</article>
+</div>
