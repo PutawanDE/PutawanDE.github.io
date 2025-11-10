@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://putawande.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://putawande.github.io/" rel="alternate" type="text/html" /><updated>2025-11-10T19:27:29+00:00</updated><id>https://putawande.github.io/feed.xml</id><title type="html">Tanadol Deachprapakorn</title><subtitle>Tanadol Deachprapakorn&apos;s personal website</subtitle><entry><title type="html">I Tried Out Flutter’s New Rendering Engine: Impeller</title><link href="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller" rel="alternate" type="text/html" title="I Tried Out Flutter’s New Rendering Engine: Impeller" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller</id><content type="html" xml:base="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://putawande.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://putawande.github.io/" rel="alternate" type="text/html" /><updated>2025-11-10T19:31:49+00:00</updated><id>https://putawande.github.io/feed.xml</id><title type="html">Tanadol Deachprapakorn</title><subtitle>Tanadol Deachprapakorn&apos;s personal website</subtitle><entry><title type="html">I Tried Out Flutter’s New Rendering Engine: Impeller</title><link href="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller" rel="alternate" type="text/html" title="I Tried Out Flutter’s New Rendering Engine: Impeller" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller</id><content type="html" xml:base="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>Flutter, Google’s open-source UI software development kit, has been making waves in the mobile development community. Recently, I had the opportunity to explore Flutter’s new rendering engine, Impeller. In this post, I’ll share my experience and insights on how Impeller enhances Flutter’s performance and graphics capabilities.</p>
 
@@ -43,16 +43,7 @@
 
 <h3 id="text-rendering">Text Rendering</h3>
 
-<p>I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia.</p>
-
-<p align="center">
-  <!-- <video src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" controls="controls" muted="muted" style="max-height:640px; min-height: 200px" /> -->
-  <video controls="controls" muted="muted" style="max-height:640px; min-height: 200px">
-    <source src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-<em>Figure 4: Text jitter when over-scrolling lists on Android <a href="https://github.com/flutter/flutter/issues/177492">source</a></em>
-</p>
+<p>I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia. You can see the issue <a href="https://github.com/flutter/flutter/issues/177492">here</a>.</p>
 
 <h3 id="other-problems">Other Problems</h3>
 
