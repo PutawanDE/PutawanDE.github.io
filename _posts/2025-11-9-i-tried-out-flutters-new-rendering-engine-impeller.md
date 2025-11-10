@@ -44,7 +44,7 @@ Impeller supports MSAA (Multisample Anti-Aliasing), a modern technique that smoo
 One particular issue that MSAA helps address is the thin gaps that can appear between two adjacent containers of the same color, caused by sub-pixel rounding errors in the UI. This improved anti-aliasing may help close those gaps, making the UI appear more polished and seamless.
 
 <p align="center" markdown="1">
-<img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/thin-gap-problem.jpg" alt="Thin gap between two adjacent containers of the same color" class="max-w-72"/>
+<img src="/assets/img/i-tried-out-flutters-new-rendering-engine-impeller/thin-gap-problem.jpg" alt="Thin gap between two adjacent containers of the same color" class="max-w-72"/>
 *Figure 3: Thin gap between two adjacent containers of the same color [source](https://github.com/flutter/flutter/issues/14288#issuecomment-1156754187)*
 </p>
 
@@ -53,7 +53,11 @@ One particular issue that MSAA helps address is the thin gaps that can appear be
 I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia.
 
 <p align="center" markdown="1">
-  <video src="/assets/video/i-tried-out-flutter’s-new-rendering-engine-impeller/text-jitter.mp4" controls="controls" muted="muted" style="max-height:640px; min-height: 200px" />
+  <!-- <video src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" controls="controls" muted="muted" style="max-height:640px; min-height: 200px" /> -->
+  <video controls="controls" muted="muted" style="max-height:640px; min-height: 200px">
+    <source src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 *Figure 4: Text jitter when over-scrolling lists on Android [source](https://github.com/flutter/flutter/issues/177492)*
 </p>
 
