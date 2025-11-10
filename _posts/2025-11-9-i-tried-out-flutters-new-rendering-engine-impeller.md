@@ -20,7 +20,7 @@ That’s why, when you launch a new game for the first time, it often loads for 
 Enter Impeller. Impeller solves this problem by using precompiled sets of shaders — compiled offline ahead of runtime — and is built to leverage modern graphics APIs such as Metal on iOS and Vulkan on Android (falling back to OpenGL ES on older devices). Previously, Flutter’s Skia backend used Metal on iOS and OpenGL ES on Android. Impeller’s build-time shader compiler converts GLSL into a GPU-specific intermediate representation, ensuring shaders can load instantly without per-frame compilation.
 
 <p align="center" markdown="1">
-![What is Vulkan compared to OpenGL?](/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/what_is_vulkan_compared_to_gl.png)
+![What is Vulkan compared to OpenGL?](/assets/img/i-tried-out-flutters-new-rendering-engine-impeller/what_is_vulkan_compared_to_gl.png)
 *Figure 1: Vulkan vs. OpenGL [source](https://docs.vulkan.org/guide/latest/what_is_vulkan.html)*
 </p>
 
@@ -31,7 +31,7 @@ Enter Impeller. Impeller solves this problem by using precompiled sets of shader
 I used Flutter version 3.35.0. In this version, Impeller is enabled by default on iOS, and on Android it runs when Vulkan is available. I tested Impeller on a Vulkan-supported Android device to observe noticeable performance differences. I ran the app in profile mode to collect accurate frame-time data using Flutter DevTools.
 
 <p align="center" markdown="1">
-![Shader Compilation Frames Chart](/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/shader-compilation-frames-chart.png)
+![Shader Compilation Frames Chart](/assets/img/i-tried-out-flutters-new-rendering-engine-impeller/shader-compilation-frames-chart.png)
 *Figure 2: Profiling chart showing shader compilation time in dark red color [source](https://docs.flutter.dev/tools/devtools/performance)*
 </p>
 
