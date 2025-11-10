@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://putawande.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://putawande.github.io/" rel="alternate" type="text/html" /><updated>2025-11-10T19:33:22+00:00</updated><id>https://putawande.github.io/feed.xml</id><title type="html">Tanadol Deachprapakorn</title><subtitle>Tanadol Deachprapakorn&apos;s personal website</subtitle><entry><title type="html">I Tried Out Flutter’s New Rendering Engine: Impeller</title><link href="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller" rel="alternate" type="text/html" title="I Tried Out Flutter’s New Rendering Engine: Impeller" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller</id><content type="html" xml:base="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://putawande.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://putawande.github.io/" rel="alternate" type="text/html" /><updated>2025-11-10T19:36:02+00:00</updated><id>https://putawande.github.io/feed.xml</id><title type="html">Tanadol Deachprapakorn</title><subtitle>Tanadol Deachprapakorn&apos;s personal website</subtitle><entry><title type="html">I Tried Out Flutter’s New Rendering Engine: Impeller</title><link href="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller" rel="alternate" type="text/html" title="I Tried Out Flutter’s New Rendering Engine: Impeller" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller</id><content type="html" xml:base="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>Flutter, Google’s open-source UI software development kit, has been making waves in the mobile development community. Recently, I had the opportunity to explore Flutter’s new rendering engine, Impeller. In this post, I’ll share my experience and insights on how Impeller enhances Flutter’s performance and graphics capabilities.</p>
 
@@ -13,7 +13,7 @@
 <p>Enter Impeller. Impeller solves this problem by using precompiled sets of shaders — compiled offline ahead of runtime — and is built to leverage modern graphics APIs such as Metal on iOS and Vulkan on Android (falling back to OpenGL ES on older devices). Previously, Flutter’s Skia backend used Metal on iOS and OpenGL ES on Android. Impeller’s build-time shader compiler converts GLSL into a GPU-specific intermediate representation, ensuring shaders can load instantly without per-frame compilation.</p>
 
 <p align="center">
-<img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/what_is_vulkan_compared_to_gl.png" alt="What is Vulkan compared to OpenGL?" />
+<img src="/assets/img/i-tried-out-flutters-new-rendering-engine-impeller/what_is_vulkan_compared_to_gl.png" alt="What is Vulkan compared to OpenGL?" />
 <em>Figure 1: Vulkan vs. OpenGL <a href="https://docs.vulkan.org/guide/latest/what_is_vulkan.html">source</a></em>
 </p>
 
@@ -24,7 +24,7 @@
 <p>I used Flutter version 3.35.0. In this version, Impeller is enabled by default on iOS, and on Android it runs when Vulkan is available. I tested Impeller on a Vulkan-supported Android device to observe noticeable performance differences. I ran the app in profile mode to collect accurate frame-time data using Flutter DevTools.</p>
 
 <p align="center">
-<img src="/assets/img/i-tried-out-flutter’s-new-rendering-engine-impeller/shader-compilation-frames-chart.png" alt="Shader Compilation Frames Chart" />
+<img src="/assets/img/i-tried-out-flutters-new-rendering-engine-impeller/shader-compilation-frames-chart.png" alt="Shader Compilation Frames Chart" />
 <em>Figure 2: Profiling chart showing shader compilation time in dark red color <a href="https://docs.flutter.dev/tools/devtools/performance">source</a></em>
 </p>
 
