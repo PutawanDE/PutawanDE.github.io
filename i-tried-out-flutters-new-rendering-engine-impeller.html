@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Introduction" />
 <meta property="og:description" content="Introduction" />
-<link rel="canonical" href="https://putawande.github.io/i-tried-out-flutter-s-new-rendering-engine-impeller" />
-<meta property="og:url" content="https://putawande.github.io/i-tried-out-flutter-s-new-rendering-engine-impeller" />
+<link rel="canonical" href="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller" />
+<meta property="og:url" content="https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller" />
 <meta property="og:site_name" content="Tanadol Deachprapakorn" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-11-09T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="I Tried Out Flutter’s New Rendering Engine: Impeller" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-09T00:00:00+00:00","datePublished":"2025-11-09T00:00:00+00:00","description":"Introduction","headline":"I Tried Out Flutter’s New Rendering Engine: Impeller","mainEntityOfPage":{"@type":"WebPage","@id":"https://putawande.github.io/i-tried-out-flutter-s-new-rendering-engine-impeller"},"url":"https://putawande.github.io/i-tried-out-flutter-s-new-rendering-engine-impeller"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-11-09T00:00:00+00:00","datePublished":"2025-11-09T00:00:00+00:00","description":"Introduction","headline":"I Tried Out Flutter’s New Rendering Engine: Impeller","mainEntityOfPage":{"@type":"WebPage","@id":"https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller"},"url":"https://putawande.github.io/i-tried-out-flutters-new-rendering-engine-impeller"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href=/assets/css/main.css>
   <link rel="stylesheet" href=/assets/css/syntax-base16.monokai.dark.css>
@@ -109,7 +109,7 @@
 <p>One particular issue that MSAA helps address is the thin gaps that can appear between two adjacent containers of the same color, caused by sub-pixel rounding errors in the UI. This improved anti-aliasing may help close those gaps, making the UI appear more polished and seamless.</p>
 
 <p align="center">
-<img src="/assets/img/i-tried-out-flutter%E2%80%99s-new-rendering-engine-impeller/thin-gap-problem.jpg" alt="Thin gap between two adjacent containers of the same color" class="max-w-72">
+<img src="/assets/img/i-tried-out-flutters-new-rendering-engine-impeller/thin-gap-problem.jpg" alt="Thin gap between two adjacent containers of the same color" class="max-w-72">
 <em>Figure 3: Thin gap between two adjacent containers of the same color <a href="https://github.com/flutter/flutter/issues/14288#issuecomment-1156754187" target="_blank" rel="noopener noreferrer">source</a></em>
 </p>
 
@@ -118,7 +118,11 @@
 <p>I, along with others, have observed text jitter when over-scrolling lists on Android. A similar issue also occurred when scaling text in previous Flutter versions. According to discussions on GitHub, this may be caused by floating-point errors and sub-pixel alignment issues. Interestingly, this problem does not appear on Skia.</p>
 
 <p align="center">
-  <video src="/assets/video/i-tried-out-flutter%E2%80%99s-new-rendering-engine-impeller/text-jitter.mp4" controls="controls" muted="muted" style="max-height:640px; min-height: 200px"></video>
+  <!-- <video src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" controls="controls" muted="muted" style="max-height:640px; min-height: 200px" /> -->
+  <video controls="controls" muted="muted" style="max-height:640px; min-height: 200px">
+    <source src="/assets/video/i-tried-out-flutters-new-rendering-engine-impeller/text-jitter.mp4" type="video/mp4"></source>
+    Your browser does not support the video tag.
+  </video>
 <em>Figure 4: Text jitter when over-scrolling lists on Android <a href="https://github.com/flutter/flutter/issues/177492" target="_blank" rel="noopener noreferrer">source</a></em>
 </p>
 
