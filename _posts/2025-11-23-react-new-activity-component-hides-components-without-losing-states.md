@@ -7,7 +7,7 @@ read_time: 5
 
 ## Introduction
 
-Usually, when we want to hide our components in React we can use conditional rendering, or css `display: none`. If we use conditiional rendering, the states will be lost when it is hidden because the component will unmount. React 18 introduces `<Activity>` component a new feature designed to manage the visibility, especially for elements that are frequently toggled.
+Usually, when we want to hide our components in React we use conditional rendering, or css `display: none`. If we use conditional rendering, the states will be lost when it is hidden because the component will unmount. React 18 introduces `<Activity>` component, a new feature designed to manage the visibility, especially for elements that are frequently toggled.
 
 {% raw %}
 ```jsx
