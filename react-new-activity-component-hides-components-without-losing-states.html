@@ -72,7 +72,7 @@
       <div class="markdown-body" itemprop="articleBody">
         <h2 id="introduction">Introduction</h2>
 
-<p>Usually, when we want to hide our components in React we can use conditional rendering, or css <code class="language-plaintext highlighter-rouge">display: none</code>. If we use conditiional rendering, the states will be lost when it is hidden because the component will unmount. React 18 introduces <code class="language-plaintext highlighter-rouge">&lt;Activity&gt;</code> component a new feature designed to manage the visibility, especially for elements that are frequently toggled.</p>
+<p>Usually, when we want to hide our components in React we use conditional rendering, or css <code class="language-plaintext highlighter-rouge">display: none</code>. If we use conditional rendering, the states will be lost when it is hidden because the component will unmount. React 18 introduces <code class="language-plaintext highlighter-rouge">&lt;Activity&gt;</code> component, a new feature designed to manage the visibility, especially for elements that are frequently toggled.</p>
 
 <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="p">[</span><span class="nx">visible</span><span class="p">,</span> <span class="nx">setVisible</span><span class="p">]</span> <span class="o">=</span> <span class="nf">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
