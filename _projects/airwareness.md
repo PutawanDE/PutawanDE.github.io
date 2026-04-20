@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Airwareness - Air Quality Mobile App
-year: "2023"
-description: A mobile app providing real-time air quality data from the government's API. I created a feature for users to add air quality info to photos, similar to Instagram Story stickers, and share on social media.
+year: "2026"
+description: Airwareness is a real-time air quality app that turns complex pollution data into clear, visual insights you can easily understand and share. Available on App Store and Google Play.
 type: Mobile App
 tech: Flutter / Dart
 image:
-  src: /assets/img/airwareness_photo.png
+  src: /assets/img/airwareness.png
   alt: "Project Airwareness"
-permalink: https://github.com/AreYouWorking/Air-pollution-awareness
+permalink: https://apps.apple.com/th/app/airwareness-air-quality-report/id6759607632
 ---

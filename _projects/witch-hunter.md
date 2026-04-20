@@ -2,7 +2,7 @@
 layout: page
 title: Witch Hunter
 year: "2024"
-description: "A Multiplayer Horror Game. It is inspired by medieval beliefs that demons can shape-shift into various animals and reside in the dark, eerie forests."
+description: "A Multiplayer Horror Game. Play as a Witch Hunter and work with your team to trap demonized deer and perform rituals—or become the Witch, shape-shifting and hunting players while hiding in plain sight."
 type: Game
 tech: "Unreal Engine 5"
 image:

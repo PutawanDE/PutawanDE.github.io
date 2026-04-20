@@ -21,12 +21,12 @@ body {
 }
 
 .styled-link {
-  @apply text-inherit cursor-pointer relative inline-flex;
+  @apply cursor-pointer relative inline-flex;
 }
 
 .styled-link::before,
 .styled-link::after {
-  background: white;
+  background: currentColor;
   bottom: 0.1px;
   content: "";
   height: 0.1em;

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: TCAS Countdown Twitter Bot
-year: 2019 - 2025
-description: 24k followers and counting... A twitter bot that tweets days until Thai National university exams (TCAS).
+year: 2019 - 2026
+description: 31k followers and counting... A twitter bot that tweets days until Thai National university exams (TCAS).
 type: Bot
 tech: Node.js / AWS Lambda / AWS EventBridge / Twitter API
 image:

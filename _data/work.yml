@@ -1,7 +1,7 @@
 - period: May 2024 - Present
   title: Web / Mobile Front-End Developer
-  company: LTMH Public Company Limited
-  company_url: https://www.ltmh.com
+  company: WealthX / LTMH (Longtunman)
+  company_url: https://www.wealthx.co
   details:
     - Developed and maintained Next.js websites "Blockdit", company's websites "Longtunman", and internal tools serving over 2 million users, ensuring high performance and scalability.
     - Integrated secure user authentication using NextAuth with backend APIs, improving login reliability and session consistency.
