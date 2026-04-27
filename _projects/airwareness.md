@@ -2,7 +2,7 @@
 layout: page
 title: Airwareness - Air Quality Mobile App
 year: "2026"
-description: Airwareness is a real-time air quality app that turns complex pollution data into clear, visual insights you can easily understand and share. Available on App Store and Google Play.
+description: Airwareness delivers real-time air quality insights by turning complex pollution data into simple, visual experiences you can easily understand and share. It ranked in the Top 40 of the Weather category at launch on the App Store and is available on both iOS and Android.
 type: Mobile App
 tech: Flutter / Dart
 image:
