@@ -8,5 +8,6 @@ tech: Flutter / Dart
 image:
   src: /assets/img/airwareness.png
   alt: "Project Airwareness"
+highlight: "Top 40 Weather App"
 permalink: https://apps.apple.com/th/app/airwareness-air-quality-report/id6759607632
 ---

@@ -11,6 +11,12 @@
           {{ item.title }}
           <span class="material-symbols-outlined !text-xl opacity-0 group-hover:opacity-100 transition-opacity">open_in_new</span>
         </a>
+        {% if item.highlight %}
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+          <span class="material-symbols-outlined !text-sm">star</span>
+          {{ item.highlight }}
+        </span>
+        {% endif %}
       </div>
       <p class="text-base sm:text-lg text-ghost-white/90 leading-relaxed">{{ item.description }}</p>
       <div class="flex flex-wrap gap-2 pt-2">

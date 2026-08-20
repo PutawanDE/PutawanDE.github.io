@@ -8,5 +8,6 @@ tech: Node.js / AWS Lambda / AWS EventBridge / Twitter API
 image:
   src: /assets/img/tcas-countdown.png
   alt: "A screenshot from Twitter showing TCAS Countdown bot account"
+highlight: "31K+ Followers"
 permalink: https://x.com/CountdownTCAS
 ---

@@ -2,6 +2,7 @@
   title: Web / Mobile Front-End Developer
   company: WealthX / LTMH (Longtunman)
   company_url: https://www.wealthx.co
+  highlight: 2M+ Active Users
   details:
     - Developed and maintained Next.js websites "Blockdit", company's websites "Longtunman", and internal tools serving over 2 million users, ensuring high performance and scalability.
     - Integrated secure user authentication using NextAuth with backend APIs, improving login reliability and session consistency.
@@ -18,6 +19,7 @@
   title: Front-End Developer (Volunteer)
   company: National Assembly of Thailand
   company_url: https://kaogeek.github.io/cons60-web/
+  highlight: Government Platform
   details:
     - Worked in a team as a front-end developer using React.js to develop a website that visualizes the changes made during the drafting of 2017 Constitution of Thailand.
 
