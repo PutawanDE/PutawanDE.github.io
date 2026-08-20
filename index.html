@@ -1,99 +1,175 @@
 ---
 layout: base
 ---
-<div class="[@media(max-height:700px)]:h-full h-dvh px-5 fadein-content">
-  <div class="bg-blob absolute right-1/4 top-1/2"></div>
-  <section class="max-w-screen-lg mx-auto flex flex-col gap-8 h-full pt-5 justify-center slide-up">
-    <div class="absolute top-5 right-0">
-      {%- include navbar.html -%}
-    </div>
+<div class="[@media(max-height:750px)]:h-auto min-h-dvh px-5 fadein-content relative">
+  <div class="bg-blob absolute right-1/4 top-1/3 pointer-events-none"></div>
+  <section class="max-w-screen-lg mx-auto flex flex-col gap-6 py-12 justify-center slide-up min-h-dvh">
     <div class="flex flex-col w-full justify-center gap-2">
-      <h1 class='text-xl sm:text-4xl'>Hi, I'm</h1>
-      <h1 class='text-2xl sm:text-5xl'>{{ site.data.personal.name }}</h1>
-      <h1 class='text-2xl sm:text-5xl'>I am a <em>{{ site.data.personal.position }}</em>.</h1>
+      <span class="text-indigo-400 font-mono text-lg tracking-wider uppercase">Welcome to my portfolio</span>
+      <h1 class="text-3xl sm:text-6xl font-bold tracking-tight">Hi, I'm {{ site.data.personal.name }}</h1>
+      <p class="text-2xl sm:text-4xl text-ghost-white/80 font-medium">
+        I am a <em>{{ site.data.personal.position }}</em>
+      </p>
     </div>
-    <p class="text-lg leading-relaxed w-full max-w-[650px]">
+
+    <p class="text-lg sm:text-xl leading-relaxed max-w-[720px] text-ghost-white/90">
       {{ site.data.personal.bio }}
     </p>
-    <div class="flex flex-row gap-2 flex-wrap">
-      <div class="card w-64">
-        <p class="text-lg">Cross Platform Development using <a href="https://flutter.dev/" target="_blank"
-            rel="noopenner noreferrer">Flutter</a></p>
+
+    <!-- Tech Stack Showcase -->
+    <div class="flex flex-col gap-3 py-2">
+      <span class="text-sm font-semibold uppercase tracking-wider text-cool-gray">Core Technologies</span>
+      <div class="flex flex-wrap gap-2.5">
+        <span class="tech-badge"><i class="devicon-flutter-plain colored text-lg"></i> Flutter</span>
+        <span class="tech-badge"><i class="devicon-react-original colored text-lg"></i> React</span>
+        <span class="tech-badge"><i class="devicon-nextjs-plain text-lg"></i> Next.js</span>
+        <span class="tech-badge"><i class="devicon-typescript-plain colored text-lg"></i> TypeScript</span>
+        <span class="tech-badge"><i class="devicon-tailwindcss-original colored text-lg"></i> Tailwind CSS</span>
+        <span class="tech-badge"><i class="devicon-amazonwebservices-plain-wordmark colored text-lg"></i> AWS</span>
       </div>
-      <div class="card w-64">
-        <p class="text-lg">Web Development using <a href="https://react.dev/" class="styled-link" target="_blank"
-            rel="noopenner noreferrer">React</a>
-          and <a href="https://nextjs.org/" class="styled-link" target="_blank" rel="noopener noreferrer">Next.js</a>
-        </p>
-      </div>
     </div>
-    <div class="flex gap-6 text-lg">
-      <a href={{ site.data.personal.resume }} class="styled-link" target="_blank" rel="noopener noreferrer">
-        RESUME
+
+    <!-- Actions & CTAs -->
+    <div class="flex flex-wrap gap-4 items-center pt-2">
+      <a href="#projects" class="btn-primary">
+        Explore Featured Work
+        <span class="material-symbols-outlined !text-xl">arrow_downward</span>
       </a>
-      <a href={{ site.data.nav[1].href }} class="styled-link">
-        BLOG
+      <a href="{{ site.data.personal.resume }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+        <span class="material-symbols-outlined !text-xl">description</span>
+        Resume (PDF)
+      </a>
+      <a href="/blog" class="btn-secondary">
+        <span class="material-symbols-outlined !text-xl">article</span>
+        Blog
       </a>
     </div>
-    <div class="flex flex-row gap-6 text-[30px] items-center">
-      <a href="mailto:{{ site.data.personal.email }}""><span
-          class=" material-symbols-outlined !text-[30px]">
-        mail
-        </span>
+
+    <!-- Social Links -->
+    <div class="flex flex-row gap-6 text-[28px] items-center pt-4 text-ghost-white/80">
+      <a href="mailto:{{ site.data.personal.email }}" class="hover:text-indigo-400 transition-colors" title="Email me">
+        <span class="material-symbols-outlined !text-[28px]">mail</span>
       </a>
-      <a href={{ site.data.personal.github }} target="_blank" rel="noopener noreferrer"><i
-          class="devicon-github-original"></i>
+      <a href="{{ site.data.personal.github }}" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors" title="GitHub Profile">
+        <i class="devicon-github-original"></i>
       </a>
-      <a href={{ site.data.personal.linkedin }} target="_blank" rel="noopener noreferrer"><i
-          class="devicon-linkedin-plain"></i></a>
-    </div>
-    <div class="animate-bounce opacity-75">
-      <p>Scroll to see more...</p>
+      <a href="{{ site.data.personal.linkedin }}" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors" title="LinkedIn Profile">
+        <i class="devicon-linkedin-plain"></i>
+      </a>
     </div>
   </section>
 </div>
 
-<div class="p-5">
-  <section class="max-w-screen-lg mx-auto">
-    <div class="border-ghost-white border-b-2 mb-6">
-      <h2 class="text-4xl">Education</h2>
-    </div>
-    {% for e in site.data.education %}
-    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
-      <p class="sm:w-1/6"><b>{{ e.period }}</b></p>
-      <p class="sm:w-5/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
-    </div>
-    {% endfor %}
+<div class="px-5 py-12">
+  <section class="max-w-screen-lg mx-auto flex flex-col gap-20">
 
-    <div class="border-ghost-white border-b-2 mb-6">
-      <h2 class="text-4xl">Work</h2>
-    </div>
-    {% for w in site.data.work %}
-    <div class="flex flex-col sm:flex-row mb-6 text-lg sm:gap-4 leading-relaxed">
-      <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
-      <div class="sm:w-5/6">
-        <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
-            rel="noopener noreferrer">{{
-            w.company }}</a></p>
-        <ul class="leading-relaxed">
-          {% for d in w.details %}
-          <li>{{ d }}</li>
-          {% endfor %}
-        </ul>
+    <!-- Featured Projects Section -->
+    <div id="projects" class="scroll-mt-12 flex flex-col gap-8">
+      <div class="border-b border-white/20 pb-4 flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <span class="text-sm font-semibold uppercase tracking-wider text-indigo-400">Portfolio</span>
+          <h2 class="text-3xl sm:text-5xl font-bold">Featured Work</h2>
+        </div>
+        <p class="text-cool-gray text-sm sm:text-base">Selected projects & products</p>
+      </div>
+
+      {% assign projects = site.projects | reverse %}
+      <div class="space-y-8">
+        {% for p in projects %}
+        {%- include project-card.html item=p -%}
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
 
-    <div class="border-ghost-white border-b-2 mb-8">
-      <h2 class="text-4xl">Projects</h2>
+    <!-- Career & Impact Highlights -->
+    <div id="experience" class="scroll-mt-12 flex flex-col gap-8">
+      <div class="border-b border-white/20 pb-4 flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <span class="text-sm font-semibold uppercase tracking-wider text-indigo-400">Experience</span>
+          <h2 class="text-3xl sm:text-5xl font-bold">Career Highlights</h2>
+        </div>
+        <a href="{{ site.data.personal.resume }}" target="_blank" rel="noopener noreferrer" class="styled-link text-sm sm:text-base">
+          View Full Resume PDF →
+        </a>
+      </div>
+
+      <div class="grid gap-6">
+        {% for w in site.data.work %}
+        <div class="border border-white/10 rounded-xl p-6 bg-white/[0.02] hover:border-white/20 transition-all flex flex-col sm:flex-row gap-4 justify-between">
+          <div class="sm:w-1/4">
+            <span class="text-sm font-mono text-indigo-300 font-semibold">{{ w.period }}</span>
+          </div>
+          <div class="sm:w-3/4 flex flex-col gap-2">
+            <h3 class="text-xl font-bold text-white">
+              {{ w.title }}
+              {% if w.company %}
+              · 
+              {% if w.company_url %}
+              <a href="{{ w.company_url }}" target="_blank" rel="noopener noreferrer" class="styled-link text-indigo-300">{{ w.company }}</a>
+              {% else %}
+              <span class="text-ghost-white/80">{{ w.company }}</span>
+              {% endif %}
+              {% endif %}
+            </h3>
+            <p class="text-base text-ghost-white/80 leading-relaxed">
+              {{ w.details[0] }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Resume PDF Callout Banner -->
+      <div class="border border-indigo-500/30 rounded-2xl p-6 sm:p-8 bg-gradient-to-r from-indigo-900/20 via-purple-900/10 to-transparent flex flex-col sm:flex-row items-center justify-between gap-6 mt-2">
+        <div class="flex flex-col gap-1 text-center sm:text-left">
+          <h4 class="text-xl font-bold text-white">Need formal work details & tech metrics?</h4>
+          <p class="text-cool-gray text-sm">Download the comprehensive single-page PDF resume for hiring & ATS.</p>
+        </div>
+        <a href="{{ site.data.personal.resume }}" target="_blank" rel="noopener noreferrer" class="btn-primary whitespace-nowrap">
+          <span class="material-symbols-outlined !text-xl">download</span>
+          Download Resume (PDF)
+        </a>
+      </div>
     </div>
 
+    <!-- Education Section -->
+    <div class="flex flex-col gap-6">
+      <div class="border-b border-white/20 pb-4">
+        <span class="text-sm font-semibold uppercase tracking-wider text-indigo-400">Background</span>
+        <h2 class="text-3xl sm:text-4xl font-bold">Education</h2>
+      </div>
 
-    {% assign projects = site.projects | reverse %}
-    <div class="space-y-10 sm:space-y-20 pb-6 sm:pb-20">
-      {% for p in projects %}
-      {%- include project-card.html item=p -%}
+      {% for e in site.data.education %}
+      <div class="border border-white/10 rounded-xl p-6 bg-white/[0.02] flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+        <div>
+          <h3 class="text-xl font-bold text-white">{{ e.degree }}</h3>
+          <p class="text-ghost-white/80">{{ e.institution }} <span class="text-cool-gray">({{ e.details }})</span></p>
+        </div>
+        <span class="text-sm font-mono text-indigo-300 font-semibold px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">{{ e.period }}</span>
+      </div>
       {% endfor %}
     </div>
+
+    <!-- Latest Articles / Writing Section -->
+    {% if site.posts.size > 0 %}
+    <div id="writing" class="scroll-mt-12 flex flex-col gap-8">
+      <div class="border-b border-white/20 pb-4 flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <span class="text-sm font-semibold uppercase tracking-wider text-indigo-400">Writing</span>
+          <h2 class="text-3xl sm:text-5xl font-bold">Latest Articles</h2>
+        </div>
+        <a href="/blog" class="styled-link text-sm sm:text-base">
+          View All Articles →
+        </a>
+      </div>
+
+      <div class="grid gap-6">
+        {% for post in site.posts limit:2 %}
+        {%- include post-card.html item=post -%}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
   </section>
 </div>
