@@ -1,14 +1,12 @@
 - period: May 2024 - Present
-  title: Web / Mobile Front-End Developer
+  title: Web / Mobile Software Engineer
   company: WealthX / LTMH (Longtunman)
   company_url: https://www.wealthx.co
+  highlight: High-Traffic Financial Apps
   details:
-    - Developed and maintained Next.js websites "Blockdit", company's websites "Longtunman", and internal tools serving over 2 million users, ensuring high performance and scalability.
-    - Integrated secure user authentication using NextAuth with backend APIs, improving login reliability and session consistency.
-    - Implemented a proof-of-concept cloud deployment for company's websites using AWS to explore scalability and cost optimization.
-    - Developed core user-facing features for a mutual fund trading platform "WealthX" using Flutter, collaborating closely with backend and product teams.
+    - Built and maintained high-traffic Next.js and Flutter applications for WealthX investment tools and major media platforms, including Blockdit and Longtunman.
 
-- period: Jun 2023 - Present
+- period: Jun 2023 - Oct 2025
   title: Front-End Developer
   company: Namjai
   details:
@@ -18,14 +16,13 @@
   title: Front-End Developer (Volunteer)
   company: National Assembly of Thailand
   company_url: https://kaogeek.github.io/cons60-web/
+  highlight: Government Platform
   details:
-    - Worked in a team as a front-end developer using React.js to develop a website that visualizes the changes made during the drafting of 2017 Constitution of Thailand.
+    - Developed a React-based platform to visualize revisions in the 2017 Constitution of Thailand, enabling interactive exploration of legal changes for lawmakers and researchers.
 
 - period: Jun 2023 - Oct 2023
   title: Chatbot Developer Intern
   company: Amity Solutions
   company_url: https://www.amitysolutions.com/
   details:
-    - Front-end development using React.js to build websites that support the Chatbot product.
-    - Implemented a data reporting system leveraging AWS Lambda, Kinesis, and S3 for real-time chatbot analytics.
-    - Used company internal tool similar to Google Dialogflow to develop NLP-based chatbots which used Intent Classification and Entity Extraction.
+    - Developed React.js frontends and AWS analytics pipelines (Lambda, Kinesis, S3) for conversational AI products, utilizing custom Dialogflow-like tools to build intent and entity extraction NLP models.

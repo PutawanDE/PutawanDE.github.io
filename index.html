@@ -1,99 +1,279 @@
 ---
 layout: base
 ---
-<div class="[@media(max-height:700px)]:h-full h-dvh px-5 fadein-content">
-  <div class="bg-blob absolute right-1/4 top-1/2"></div>
-  <section class="max-w-screen-lg mx-auto flex flex-col gap-8 h-full pt-5 justify-center slide-up">
-    <div class="absolute top-5 right-0">
-      {%- include navbar.html -%}
-    </div>
+<div class="[@media(max-height:700px)]:h-auto min-h-dvh px-5 fadein-content relative">
+  <div class="bg-blob absolute right-1/4 top-1/3 pointer-events-none opacity-40"></div>
+  <section class="max-w-screen-lg mx-auto flex flex-col gap-6 py-16 justify-center slide-up min-h-dvh">
     <div class="flex flex-col w-full justify-center gap-2">
-      <h1 class='text-xl sm:text-4xl'>Hi, I'm</h1>
-      <h1 class='text-2xl sm:text-5xl'>{{ site.data.personal.name }}</h1>
-      <h1 class='text-2xl sm:text-5xl'>I am a <em>{{ site.data.personal.position }}</em>.</h1>
+      <h1 class="text-3xl sm:text-6xl font-bold tracking-tight">Hi, I'm {{ site.data.personal.name }}</h1>
+      <p class="text-xl sm:text-3xl text-ghost-white opacity-80 font-normal">
+        I am a {{ site.data.personal.position }}.
+      </p>
     </div>
-    <p class="text-lg leading-relaxed w-full max-w-[650px]">
-      {{ site.data.personal.bio }}
-    </p>
-    <div class="flex flex-row gap-2 flex-wrap">
-      <div class="card w-64">
-        <p class="text-lg">Cross Platform Development using <a href="https://flutter.dev/" target="_blank"
-            rel="noopenner noreferrer">Flutter</a></p>
+
+    <!-- Dark Developer Dashboard Bento Grid (Site Accent Colors) -->
+    <div class="w-full my-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+
+        <!-- Tile 1: Primary Feature Tile (2M+ Users - Site Accent Gradient) -->
+        <div
+          class="md:col-span-2 rounded-xl p-5 sm:p-6 bg-gradient-to-br from-indigo-900/90 via-indigo-950 to-[#2a2046] text-white shadow-xl flex flex-col justify-between h-full border border-indigo-500/30 relative overflow-hidden group">
+          <div class="flex items-center justify-between border-b border-indigo-500/20 pb-2.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-300 font-semibold">
+              PRODUCTION SCALE
+            </span>
+            <span class="material-symbols-outlined text-indigo-300 !text-xl">trending_up</span>
+          </div>
+
+          <div class="mt-4 flex flex-col gap-1.5">
+            <div class="flex items-baseline gap-3 flex-wrap">
+              <span class="text-4xl sm:text-5xl font-black font-mono tracking-tight text-indigo-300">High-Traffic</span>
+              <span class="text-xs sm:text-sm font-mono uppercase tracking-wider text-ghost-white opacity-90 font-bold">
+                Financial Web & Mobile Apps</span>
+            </div>
+            <p class="text-xs sm:text-sm text-ghost-white opacity-90 leading-relaxed mt-1">
+              Built and maintained high-traffic Next.js & Flutter frontend apps for WealthX investment tools,
+              Blockdit, and Longtunman media platforms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tile 2: App Store Success (Dark Accent Tile) -->
+        <div
+          class="rounded-xl p-5 bg-[#1f1d2b] border border-indigo-500/20 text-white shadow-lg flex flex-col justify-between h-full group hover:border-indigo-400/40 transition-colors">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">
+              MOBILE APP
+            </span>
+            <span class="material-symbols-outlined text-indigo-400 !text-lg">air</span>
+          </div>
+          <div class="mt-4 flex flex-col gap-1.5">
+            <div class="flex flex-col">
+              <span class="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight">Top 40</span>
+              <span class="text-xs font-mono uppercase tracking-wider text-cool-gray font-bold">App Store Weather</span>
+            </div>
+            <p class="text-xs text-ghost-white opacity-80 leading-relaxed mt-1">
+              Airwareness Air Quality reporting mobile app shipped cross-platform with Flutter & Dart.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tile 3: 31K+ Bot Followers (Dark Accent Tile) -->
+        <div
+          class="rounded-xl p-5 bg-[#1f1d2b] border border-indigo-500/20 text-white shadow-lg flex flex-col justify-between h-full group hover:border-indigo-400/40 transition-colors">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">
+              AUTOMATION
+            </span>
+            <span class="material-symbols-outlined text-indigo-400 !text-lg">smart_toy</span>
+          </div>
+          <div class="mt-4 flex flex-col gap-1.5">
+            <div class="flex flex-col">
+              <span class="text-3xl sm:text-4xl font-black font-mono text-white tracking-tight">31K+</span>
+              <span class="text-xs font-mono uppercase tracking-wider text-cool-gray font-bold">Bot Followers</span>
+            </div>
+            <p class="text-xs text-ghost-white opacity-80 leading-relaxed mt-1">
+              Automated TCAS Twitter bot built on AWS Lambda & EventBridge cron pipelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tile 4: Specialized Systems (Dark Accent Tile 2-Col Span) -->
+        <div
+          class="md:col-span-2 rounded-xl p-5 bg-[#1f1d2b] border border-indigo-500/20 text-white shadow-lg flex flex-col justify-between h-full hover:border-indigo-400/40 transition-colors">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2.5 mb-2">
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">
+              SPECIALIZED SYSTEMS
+            </span>
+            <span class="material-symbols-outlined text-indigo-400 !text-lg">terminal</span>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4 mt-2">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-indigo-300 font-bold block mb-1">Gov Tech
+                Visualization</span>
+              <p class="text-xs text-ghost-white opacity-80 leading-relaxed">
+                Interactive 2017 Constitution revision platform built for National Assembly of Thailand.
+              </p>
+            </div>
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-indigo-300 font-bold block mb-1">Multiplayer
+                Game Engines</span>
+              <p class="text-xs text-ghost-white opacity-80 leading-relaxed">
+                Unreal Engine 5 network replication & Java Spring Boot WebSocket strategy games.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div class="card w-64">
-        <p class="text-lg">Web Development using <a href="https://react.dev/" class="styled-link" target="_blank"
-            rel="noopenner noreferrer">React</a>
-          and <a href="https://nextjs.org/" class="styled-link" target="_blank" rel="noopener noreferrer">Next.js</a>
-        </p>
-      </div>
     </div>
-    <div class="flex gap-6 text-lg">
-      <a href={{ site.data.personal.resume }} class="styled-link" target="_blank" rel="noopener noreferrer">
-        RESUME
-      </a>
-      <a href={{ site.data.nav[1].href }} class="styled-link">
-        BLOG
-      </a>
+
+    <!-- Tech Stack Pills -->
+    <div class="flex flex-wrap gap-2 py-2 w-full">
+      <span class="tech-badge"><i class="devicon-flutter-plain text-base"></i> Flutter</span>
+      <span class="tech-badge"><i class="devicon-react-original text-base"></i> React</span>
+      <span class="tech-badge"><i class="devicon-nextjs-plain text-base"></i> Next.js</span>
+      <span class="tech-badge"><i class="devicon-typescript-plain text-base"></i> TypeScript</span>
+      <span class="tech-badge"><i class="devicon-tailwindcss-original text-base"></i> Tailwind</span>
+      <span class="tech-badge"><i class="devicon-amazonwebservices-plain-wordmark text-base"></i> AWS</span>
+      <span class="tech-badge"><i class="devicon-java-plain text-base"></i> Java</span>
+      <span class="tech-badge"><i class="devicon-python-plain text-base"></i> Python</span>
     </div>
-    <div class="flex flex-row gap-6 text-[30px] items-center">
-      <a href="mailto:{{ site.data.personal.email }}""><span
-          class=" material-symbols-outlined !text-[30px]">
-        mail
-        </span>
+
+    <!-- Minimalist Links Bar -->
+    <div class="flex flex-wrap items-center gap-6 pt-3 text-base font-medium">
+      <a href="{{ site.data.personal.resume }}" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-ghost-white hover:text-indigo-300 transition-colors group">
+        <span
+          class="material-symbols-outlined !text-xl text-indigo-400 group-hover:scale-110 transition-transform">description</span>
+        <span class="styled-link">Resume (PDF)</span>
       </a>
-      <a href={{ site.data.personal.github }} target="_blank" rel="noopener noreferrer"><i
-          class="devicon-github-original"></i>
+      <a href="/blog"
+        class="inline-flex items-center gap-2 text-ghost-white hover:text-indigo-300 transition-colors group">
+        <span
+          class="material-symbols-outlined !text-xl text-indigo-400 group-hover:scale-110 transition-transform">article</span>
+        <span class="styled-link">Blog</span>
       </a>
-      <a href={{ site.data.personal.linkedin }} target="_blank" rel="noopener noreferrer"><i
-          class="devicon-linkedin-plain"></i></a>
-    </div>
-    <div class="animate-bounce opacity-75">
-      <p>Scroll to see more...</p>
+      <a href="{{ site.data.personal.github }}" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-ghost-white hover:text-indigo-300 transition-colors group">
+        <i class="devicon-github-original text-xl text-indigo-400 group-hover:scale-110 transition-transform"></i>
+        <span class="styled-link">GitHub</span>
+      </a>
+      <a href="{{ site.data.personal.linkedin }}" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-ghost-white hover:text-indigo-300 transition-colors group">
+        <i class="devicon-linkedin-plain text-xl text-indigo-400 group-hover:scale-110 transition-transform"></i>
+        <span class="styled-link">LinkedIn</span>
+      </a>
+      <a href="mailto:{{ site.data.personal.email }}"
+        class="inline-flex items-center gap-2 text-ghost-white hover:text-indigo-300 transition-colors group">
+        <span
+          class="material-symbols-outlined !text-xl text-indigo-400 group-hover:scale-110 transition-transform">mail</span>
+        <span class="styled-link">Email</span>
+      </a>
     </div>
   </section>
 </div>
 
-<div class="p-5">
-  <section class="max-w-screen-lg mx-auto">
-    <div class="border-ghost-white border-b-2 mb-6">
-      <h2 class="text-4xl">Education</h2>
-    </div>
-    {% for e in site.data.education %}
-    <div class="flex flex-col sm:flex-row mb-6 text-lg gap-4">
-      <p class="sm:w-1/6"><b>{{ e.period }}</b></p>
-      <p class="sm:w-5/6">{{ e.degree }}, {{ e.institution }} ({{ e.details }})</p>
-    </div>
-    {% endfor %}
+<div class="px-5 py-12">
+  <section class="max-w-screen-lg mx-auto flex flex-col gap-16">
 
-    <div class="border-ghost-white border-b-2 mb-6">
-      <h2 class="text-4xl">Work</h2>
-    </div>
-    {% for w in site.data.work %}
-    <div class="flex flex-col sm:flex-row mb-6 text-lg sm:gap-4 leading-relaxed">
-      <p class="sm:w-1/6"><b>{{ w.period }}</b></p>
-      <div class="sm:w-5/6">
-        <p class="font-bold mb-2">{{ w.title }}, <a href={{ w.company_url }} class="styled-link" target="_blank"
-            rel="noopener noreferrer">{{
-            w.company }}</a></p>
-        <ul class="leading-relaxed">
-          {% for d in w.details %}
-          <li>{{ d }}</li>
-          {% endfor %}
-        </ul>
+    <!-- Featured Projects Section -->
+    <div id="projects" class="scroll-mt-12 flex flex-col gap-6">
+      <div class="border-b border-white/20 pb-3 flex items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects</h2>
+        <span class="text-cool-gray text-sm font-mono">Selected Work</span>
+      </div>
+
+      {% assign projects = site.projects | reverse %}
+      <div class="divide-y divide-white/10">
+        {% for p in projects %}
+        {%- include project-card.html item=p -%}
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
 
-    <div class="border-ghost-white border-b-2 mb-8">
-      <h2 class="text-4xl">Projects</h2>
+    <!-- Career Highlights Section -->
+    <div id="experience" class="scroll-mt-12 flex flex-col gap-6">
+      <div class="border-b border-white/20 pb-3 flex items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl font-bold">Experience</h2>
+        <a href="{{ site.data.personal.resume }}" target="_blank" rel="noopener noreferrer" class="styled-link text-sm">
+          Full Resume PDF →
+        </a>
+      </div>
+
+      <div class="space-y-6">
+        {% for w in site.data.work %}
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-between pb-4 border-b border-white/5">
+          <div class="sm:w-1/4">
+            <span class="text-sm font-mono text-cool-gray">{{ w.period }}</span>
+          </div>
+          <div class="sm:w-3/4 flex flex-col gap-1">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2 flex-wrap">
+              {{ w.title }}
+              {% if w.company %}
+              <span class="text-cool-gray font-normal">at</span>
+              {% if w.company_url %}
+              <a href="{{ w.company_url }}" target="_blank" rel="noopener noreferrer"
+                class="styled-link text-indigo-300">{{ w.company }}</a>
+              {% else %}
+              <span class="text-ghost-white opacity-90">{{ w.company }}</span>
+              {% endif %}
+              {% endif %}
+              {% if w.highlight %}
+              <span
+                class="px-2 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/20 font-sans">
+                {{ w.highlight }}
+              </span>
+              {% endif %}
+            </h3>
+            <p class="text-base text-ghost-white opacity-80 leading-relaxed mt-1">
+              {{ w.details[0] }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
 
+    <!-- Recognition & Awards -->
+    <div id="awards" class="scroll-mt-12 flex flex-col gap-6">
+      <div class="border-b border-white/20 pb-3">
+        <h2 class="text-2xl sm:text-3xl font-bold">Honors & Recognition</h2>
+      </div>
 
-    {% assign projects = site.projects | reverse %}
-    <div class="space-y-10 sm:space-y-20 pb-6 sm:pb-20">
-      {% for p in projects %}
-      {%- include project-card.html item=p -%}
+      <div class="space-y-4">
+        {% for a in site.data.awards %}
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center pb-4 border-b border-white/5">
+          <div class="flex flex-col gap-0.5">
+            <h3 class="text-base font-bold text-white">{{ a.title }} <span class="text-cool-gray font-normal">· {{
+                a.event }}</span></h3>
+            <p class="text-sm text-cool-gray">{{ a.description }}</p>
+          </div>
+          <span
+            class="px-3 py-1 rounded-md text-xs font-mono font-semibold text-indigo-300 bg-white/5 border border-white/10 shrink-0 self-start sm:self-center">
+            {{ a.date }}
+          </span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="flex flex-col gap-6">
+      <div class="border-b border-white/20 pb-3">
+        <h2 class="text-2xl sm:text-3xl font-bold">Education</h2>
+      </div>
+
+      {% for e in site.data.education %}
+      <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 justify-between items-start sm:items-baseline">
+        <div>
+          <h3 class="text-lg font-bold text-white">{{ e.degree }}</h3>
+          <p class="text-ghost-white opacity-80 text-base">{{ e.institution }} <span class="text-cool-gray">({{
+              e.details }})</span></p>
+        </div>
+        <span class="text-sm font-mono text-cool-gray">{{ e.period }}</span>
+      </div>
       {% endfor %}
     </div>
+
+    <!-- Latest Writing Section -->
+    {% if site.posts.size > 0 %}
+    <div id="writing" class="scroll-mt-12 flex flex-col gap-6">
+      <div class="border-b border-white/20 pb-3 flex items-baseline justify-between">
+        <h2 class="text-2xl sm:text-3xl font-bold">Latest Writing</h2>
+        <a href="/blog" class="styled-link text-sm">
+          All Articles →
+        </a>
+      </div>
+
+      <div class="grid gap-6">
+        {% for post in site.posts limit:2 %}
+        {%- include post-card.html item=post -%}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
   </section>
 </div>
